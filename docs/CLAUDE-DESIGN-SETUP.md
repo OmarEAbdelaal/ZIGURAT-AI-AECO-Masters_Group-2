@@ -14,11 +14,11 @@ Copy each block below into the matching field. Nothing here needs editing except
 
 ## 2. Link code from GitHub
 
-Paste the repository URL once it exists:
+```
+https://github.com/OmarEAbdelaal/ZIGURAT-AI-AECO-Masters_Group-2
+```
 
-```
-https://github.com/<your-username>/fmp-design-system
-```
+The repo is **private**, so Claude Design can only read it if your GitHub account is connected with access to private repositories. If it can't reach it, the folder attachment in field 3 covers the same content — you don't need both.
 
 ---
 
