@@ -1,0 +1,291 @@
+/* =============================================================================
+   ZIGURAT AI-AECO Master — Group 2 FMP Design System
+   tokens.css — the single source of truth for anything visual.
+
+   Generated from design-tokens/colors.json + design-tokens/typography.json.
+   If you change a value here, change it there too.
+
+   Usage:  <link rel="stylesheet" href="design-tokens/tokens.css">
+   Then reference var(--color-primary), var(--font-heading), var(--space-4) …
+
+   Never hard-code a hex, a font name, or a pixel gap in a deliverable.
+   That is the whole point of this file.
+   ========================================================================== */
+
+/* -- 1. Raw brand palette --------------------------------------------------
+   These are the literal ingredient colours. Do not use them directly in a
+   component; use the semantic roles in section 2 instead, so that dark theme
+   and any future rebrand keep working.                                     */
+
+:root {
+  /* Sampled pixel-exact from assets/logo/zigurat-logo.jpg */
+  --brand-electric-blue:      #1C60F3;
+  --brand-electric-blue-dark: #1449B8;
+  --brand-electric-blue-lite: #5B8DEF;  /* dark-theme fill (button background) */
+  --brand-electric-blue-pale: #7FA9F7;  /* dark-theme TEXT — clears every dark surface */
+  --brand-electric-blue-tint: #E8EFFE;
+
+  --brand-mint-green:         #41CF97;
+  --brand-mint-green-dark:    #2E9E72;
+  --brand-mint-green-text:    #1E7A57;  /* the only green that reads on white AND on its own tint */
+  --brand-mint-green-tint:    #E7F8F1;
+
+  /* Neutrals */
+  --neutral-charcoal:  #1B1F23;
+  --neutral-graphite:  #2D3339;
+  --neutral-slate:     #4A5568;
+  --neutral-steel:     #8A94A6;
+  --neutral-steel-lite:#98A1B1;         /* dark-theme muted text */
+  --neutral-silver:    #E2E8F0;
+  --neutral-off-white: #F7F9FA;
+  --neutral-white:     #FFFFFF;
+
+  /* Status hues */
+  --status-amber:      #D69E2E;
+  --status-amber-text: #8C651C;         /* AA on white and on the amber tint */
+  --status-orange:     #DD6B20;
+  --status-orange-text:#AB5218;         /* AA on white and on the orange tint */
+  --status-red:        #C53030;
+  --status-red-lite:   #E58F8F;         /* dark-theme danger — clears every dark surface */
+}
+
+/* -- 2. Semantic roles (light theme = default) -----------------------------
+   Components reference ONLY these. Section 3 re-points them for dark theme. */
+
+:root {
+  --color-primary:        var(--brand-electric-blue);
+  --color-primary-hover:  var(--brand-electric-blue-dark);
+  --color-primary-text:   var(--brand-electric-blue);      /* 5.23:1 on white — AA */
+  --color-primary-tint:   var(--brand-electric-blue-tint);
+  --color-on-primary:     var(--neutral-white);            /* 5.23:1 — AA */
+
+  --color-accent:         var(--brand-mint-green);
+  --color-accent-hover:   var(--brand-mint-green-dark);
+  --color-accent-text:    var(--brand-mint-green-text);    /* 5.28:1 on white — AA */
+  --color-accent-tint:    var(--brand-mint-green-tint);
+  --color-on-accent:      var(--neutral-charcoal);         /* 8.36:1 — AAA */
+
+  --color-bg:             var(--neutral-off-white);
+  --color-surface:        var(--neutral-white);
+  --color-surface-raised: var(--neutral-white);
+  --color-border:         var(--neutral-silver);
+  --color-border-strong:  var(--neutral-steel);
+
+  --color-text:           var(--neutral-charcoal);         /* 16.58:1 — AAA */
+  --color-text-muted:     var(--neutral-slate);            /*  7.53:1 — AAA */
+  --color-text-subtle:    var(--neutral-steel);            /*  3.06:1 — large text / non-text only */
+  --color-text-inverse:   var(--neutral-white);
+
+  --color-success:        var(--brand-mint-green);
+  --color-success-text:   var(--brand-mint-green-text);
+  --color-info:           var(--brand-electric-blue);
+  --color-info-text:      var(--brand-electric-blue);
+  --color-warning:        var(--status-amber);
+  --color-warning-text:   var(--status-amber-text);
+  --color-danger:         var(--status-red);
+  --color-danger-text:    var(--status-red);               /* 5.47:1 — AA */
+
+  /* Tinted backgrounds. Each pairs with the matching *-text above at >= 4.5:1. */
+  --color-info-tint:      var(--brand-electric-blue-tint);
+  --color-success-tint:   var(--brand-mint-green-tint);
+  --color-warning-tint:   #FBF3E2;
+  --color-danger-tint:    #FBEAEA;
+
+  /* High risk sits between warning and danger and needs its own text/tint pair. */
+  --color-high:           var(--status-orange);
+  --color-high-text:      var(--status-orange-text);      /* 5.31:1 on white — AA */
+  --color-high-tint:      #FDEEE2;
+
+  --color-neutral-tint:   var(--neutral-silver);
+  --color-neutral-text:   var(--neutral-slate);           /* 6.10:1 on silver — AA */
+  --color-on-danger:      var(--neutral-white);           /* 5.47:1 on #C53030 — AA */
+
+  --color-focus-ring:     var(--brand-electric-blue);
+
+  /* Value-risk scale — drives the FMP's risk badges, legends and heatmaps */
+  --risk-low:      #41CF97;
+  --risk-moderate: #D69E2E;
+  --risk-high:     #DD6B20;
+  --risk-critical: #C53030;
+
+  /* Categorical chart series, ordered by first-use priority */
+  --series-1: #1C60F3;
+  --series-2: #41CF97;
+  --series-3: #7B4FE0;
+  --series-4: #DD6B20;
+  --series-5: #4A5568;
+  --series-6: #17A2B8;
+}
+
+/* -- 3. Dark theme ---------------------------------------------------------
+   Applies on prefers-color-scheme: dark unless the page opts out with
+   data-theme="light". [data-theme="dark"] forces it on either way.         */
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --color-primary:        var(--brand-electric-blue-lite);
+    --color-primary-hover:  var(--brand-electric-blue-pale);
+    --color-primary-text:   var(--brand-electric-blue-pale);  /* 7.04:1 charcoal · 5.43:1 graphite — AA */
+    --color-primary-tint:   #16233D;
+    --color-on-primary:     var(--neutral-charcoal);
+
+    --color-accent-text:    var(--brand-mint-green);         /* 8.36:1 on charcoal — AAA */
+    --color-accent-tint:    #12291F;
+
+    --color-bg:             var(--neutral-charcoal);
+    --color-surface:        var(--neutral-graphite);
+    --color-surface-raised: #363D45;
+    --color-border:         #3C444D;
+    --color-border-strong:  var(--neutral-steel);
+
+    --color-text:           var(--neutral-silver);           /* 13.45:1 — AAA */
+    --color-text-muted:     var(--neutral-steel-lite);       /*  4.91:1 on graphite — AA */
+    --color-text-subtle:    #6B7688;
+    --color-text-inverse:   var(--neutral-charcoal);
+
+    --color-success-text:   var(--brand-mint-green);
+    --color-info-text:      var(--brand-electric-blue-pale);
+    --color-warning-text:   var(--status-amber);             /* 6.94:1 — AA */
+    --color-danger:         var(--status-red-lite);
+    --color-danger-text:    var(--status-red-lite);           /* 6.83:1 charcoal · 5.27:1 graphite — AA */
+
+
+    --color-info-tint:      #16233D;
+    --color-success-tint:   #12291F;
+    --color-warning-tint:   #2E2412;                         /* 6.38:1 with amber text */
+    --color-danger-tint:    #2E1A1A;                         /* 6.77:1 with pale-red text */
+    --color-high-text:      #F0A57A;                         /* 7.78:1 on the dark high tint */
+    --color-high-tint:      #2E2014;
+    --color-neutral-tint:   #3C444D;
+    --color-neutral-text:   var(--neutral-silver);           /* 8.01:1 — AAA */
+    --color-on-danger:      var(--neutral-charcoal);         /* 6.83:1 on #E58F8F — AA */
+
+    --color-focus-ring:     var(--brand-electric-blue-lite);
+
+    --shadow-card:   0 2px 8px rgba(0, 0, 0, 0.4);
+    --shadow-raised: 0 8px 24px rgba(0, 0, 0, 0.5);
+  }
+}
+
+:root[data-theme="dark"] {
+  --color-primary:        var(--brand-electric-blue-lite);
+  --color-primary-hover:  var(--brand-electric-blue-pale);
+  --color-primary-text:   var(--brand-electric-blue-pale);
+  --color-primary-tint:   #16233D;
+  --color-on-primary:     var(--neutral-charcoal);
+
+  --color-accent-text:    var(--brand-mint-green);
+  --color-accent-tint:    #12291F;
+
+  --color-bg:             var(--neutral-charcoal);
+  --color-surface:        var(--neutral-graphite);
+  --color-surface-raised: #363D45;
+  --color-border:         #3C444D;
+  --color-border-strong:  var(--neutral-steel);
+
+  --color-text:           var(--neutral-silver);
+  --color-text-muted:     var(--neutral-steel-lite);       /*  4.91:1 on graphite — AA */
+  --color-text-subtle:    #6B7688;
+  --color-text-inverse:   var(--neutral-charcoal);
+
+  --color-success-text:   var(--brand-mint-green);
+  --color-info-text:      var(--brand-electric-blue-pale);
+  --color-warning-text:   var(--status-amber);
+  --color-danger:         var(--status-red-lite);
+  --color-danger-text:    var(--status-red-lite);
+
+
+  --color-info-tint:      #16233D;
+  --color-success-tint:   #12291F;
+  --color-warning-tint:   #2E2412;                         /* 6.38:1 with amber text */
+  --color-danger-tint:    #2E1A1A;                         /* 6.77:1 with pale-red text */
+  --color-high-text:      #F0A57A;                         /* 7.78:1 on the dark high tint */
+  --color-high-tint:      #2E2014;
+  --color-neutral-tint:   #3C444D;
+  --color-neutral-text:   var(--neutral-silver);
+  --color-on-danger:      var(--neutral-charcoal);
+
+  --color-focus-ring:     var(--brand-electric-blue-lite);
+
+  --shadow-card:   0 2px 8px rgba(0, 0, 0, 0.4);
+  --shadow-raised: 0 8px 24px rgba(0, 0, 0, 0.5);
+}
+
+/* -- 4. Typography ---------------------------------------------------------
+   Load the fonts once, in the page <head>:
+
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400&display=swap">
+
+   Every family has a system fallback, so an offline deliverable still renders
+   with sane metrics.                                                       */
+
+:root {
+  --font-heading: 'Poppins', 'Segoe UI', system-ui, sans-serif;
+  --font-body:    'Inter', 'Segoe UI', system-ui, sans-serif;
+  --font-mono:    'JetBrains Mono', 'Cascadia Mono', Consolas, monospace;
+
+  --text-display:  3rem;
+  --text-h1:       2.5rem;
+  --text-h2:       2rem;
+  --text-h3:       1.5rem;
+  --text-h4:       1.25rem;
+  --text-body:     1rem;
+  --text-small:    0.875rem;
+  --text-caption:  0.75rem;
+  --text-overline: 0.6875rem;
+
+  --leading-tight:   1.15;
+  --leading-snug:    1.25;
+  --leading-normal:  1.6;
+  --leading-relaxed: 1.75;
+
+  --tracking-tight:  -0.02em;
+  --tracking-normal: 0;
+  --tracking-wide:   0.08em;
+
+  --weight-regular:  400;
+  --weight-medium:   500;
+  --weight-semibold: 600;
+  --weight-bold:     700;
+}
+
+/* -- 5. Space, shape, elevation, motion ------------------------------------
+   Spacing is an 8px base with two half-steps for tight UI. Use the scale;
+   do not invent a 13px gap.                                                */
+
+:root {
+  --space-0: 0;
+  --space-1: 0.25rem;   /*  4px */
+  --space-2: 0.5rem;    /*  8px */
+  --space-3: 1rem;      /* 16px */
+  --space-4: 1.5rem;    /* 24px */
+  --space-5: 2rem;      /* 32px */
+  --space-6: 3rem;      /* 48px */
+  --space-7: 4rem;      /* 64px */
+  --space-8: 6rem;      /* 96px */
+
+  --radius-sm:   4px;
+  --radius-md:   8px;
+  --radius-lg:  16px;
+  --radius-pill: 999px;
+
+  --border-width:       1px;
+  --border-width-thick: 2px;
+
+  --shadow-card:   0 2px 8px rgba(27, 31, 35, 0.08);
+  --shadow-raised: 0 8px 24px rgba(27, 31, 35, 0.12);
+  --shadow-focus:  0 0 0 3px rgba(28, 96, 243, 0.35);
+
+  --duration-fast: 120ms;
+  --duration-base: 200ms;
+  --easing-standard: cubic-bezier(0.2, 0, 0.2, 1);
+
+  --container-max: 1120px;
+  --content-max:   68ch;   /* readable measure for long-form report text */
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root { --duration-fast: 0ms; --duration-base: 0ms; }
+}

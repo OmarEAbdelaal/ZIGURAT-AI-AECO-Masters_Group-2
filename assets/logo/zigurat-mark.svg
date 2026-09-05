@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 104" width="128" height="104" role="img" aria-labelledby="zigurat-mark-title">
+  <title id="zigurat-mark-title">Zigurat mark — two-tone isometric ziggurat</title>
+  <!--
+    Vector rebuild of the Zigurat mark, traced from assets/logo/zigurat-logo.jpg
+    by pixel sampling. Two stacked isometric steps on a true 2:1 axonometric
+    slope; each step is split into a blue left face and a green right face.
+    Colours are exact samples: #1C60F3 / #41CF97.
+
+    The Zigurat name and mark belong to Zigurat Global Institute of Technology.
+    Reproduced here for academic use within the MAICEN Final Master's Project.
+    See docs/BRAND-NOTES.md before using it anywhere else.
+  -->
+  <g fill="#1C60F3">
+    <path d="M32 0 L64 16 L64 48 L32 32 Z"/>
+    <path d="M0 40 L64 72 L64 104 L0 72 Z"/>
+  </g>
+  <g fill="#41CF97">
+    <path d="M96 0 L64 16 L64 48 L96 32 Z"/>
+    <path d="M128 40 L64 72 L64 104 L128 72 Z"/>
+  </g>
+</svg>

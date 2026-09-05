@@ -1,0 +1,180 @@
+{
+  "$schema": "https://design-tokens.github.io/community-group/format/",
+  "$description": "ZIGURAT AI-AECO Master — Group 2 FMP design system. Brand colours were sampled by pixel-inspection of the official Zigurat logo mark (assets/logo/zigurat-logo.jpg): the two-tone isometric ziggurat in electric blue and mint green. Both values are exact matches of the dominant non-white pixels in that file.",
+  "color": {
+    "brand": {
+      "electric-blue": {
+        "value": "#1C60F3",
+        "type": "color",
+        "description": "Primary. Exact sample from the logo's blue face. Use for primary actions, links, key data series."
+      },
+      "electric-blue-dark": {
+        "value": "#1449B8",
+        "type": "color",
+        "description": "Hover / active / pressed state for electric-blue."
+      },
+      "electric-blue-tint": {
+        "value": "#E8EFFE",
+        "type": "color",
+        "description": "Tinted background for info callouts and selected rows."
+      },
+      "mint-green": {
+        "value": "#41CF97",
+        "type": "color",
+        "description": "Primary. Exact sample from the logo's green face. Use for success, positive value delta, secondary data series."
+      },
+      "mint-green-dark": {
+        "value": "#2E9E72",
+        "type": "color",
+        "description": "Hover / active state, and the accessible text-on-light variant of mint-green."
+      },
+      "mint-green-tint": {
+        "value": "#E7F8F1",
+        "type": "color",
+        "description": "Tinted background for success callouts and positive scorecards."
+      },
+      "mint-green-text": {
+        "value": "#1E7A57",
+        "type": "color",
+        "description": "The green to use when green must be READ. 5.28:1 on white, 4.80:1 on its own tint — AA at any size. Brand mint itself is 1.98:1 on white and must never carry text."
+      },
+      "electric-blue-pale": {
+        "value": "#7FA9F7",
+        "type": "color",
+        "description": "Dark-theme text/link blue. 7.04:1 on charcoal, 5.43:1 on the graphite surface."
+      },
+      "electric-blue-lite": {
+        "value": "#5B8DEF",
+        "type": "color",
+        "description": "Dark-theme fill (e.g. primary button background, with charcoal text at 5.13:1)."
+      }
+    },
+    "neutral": {
+      "charcoal": {
+        "value": "#1B1F23",
+        "type": "color",
+        "description": "Primary text on light; page background in dark theme."
+      },
+      "graphite": {
+        "value": "#2D3339",
+        "type": "color",
+        "description": "Elevated surface in dark theme."
+      },
+      "slate": {
+        "value": "#4A5568",
+        "type": "color",
+        "description": "Secondary text, captions, axis labels."
+      },
+      "steel": {
+        "value": "#8A94A6",
+        "type": "color",
+        "description": "Placeholder text, disabled states, gridlines."
+      },
+      "silver": {
+        "value": "#E2E8F0",
+        "type": "color",
+        "description": "Borders, dividers, table rules."
+      },
+      "off-white": {
+        "value": "#F7F9FA",
+        "type": "color",
+        "description": "Page background in light theme."
+      },
+      "white": {
+        "value": "#FFFFFF",
+        "type": "color",
+        "description": "Cards and surfaces in light theme."
+      },
+      "steel-lite": {
+        "value": "#98A1B1",
+        "type": "color",
+        "description": "Dark-theme muted text. 4.91:1 on the graphite surface."
+      }
+    },
+    "semantic": {
+      "success": {
+        "value": "{color.brand.mint-green}",
+        "type": "color",
+        "description": "Value gain, passed check, aligned with client priorities."
+      },
+      "info": {
+        "value": "{color.brand.electric-blue}",
+        "type": "color",
+        "description": "Neutral system message, informational flag."
+      },
+      "warning": {
+        "value": "#D69E2E",
+        "type": "color",
+        "description": "Value at risk, decision needs review."
+      },
+      "danger": {
+        "value": "#C53030",
+        "type": "color",
+        "description": "Value loss, blocker, failed constraint."
+      },
+      "success-text": {
+        "value": "{color.brand.mint-green-text}",
+        "type": "color",
+        "description": "Text form of success."
+      },
+      "warning-text": {
+        "value": "#8C651C",
+        "type": "color",
+        "description": "Text form of warning. 5.26:1 on white, 4.76:1 on the amber tint. The #D69E2E fill is 2.39:1 and is never used for text."
+      },
+      "danger-text-dark": {
+        "value": "#E58F8F",
+        "type": "color",
+        "description": "Dark-theme danger text. 6.83:1 on charcoal, 5.27:1 on graphite."
+      }
+    },
+    "value-risk": {
+      "$description": "Categorical scale for the FMP's value-risk classification (cost / functional / sustainability impact). Ordered low to high so it can drive a legend or a heatmap directly.",
+      "low": {
+        "value": "#41CF97",
+        "type": "color"
+      },
+      "moderate": {
+        "value": "#D69E2E",
+        "type": "color"
+      },
+      "high": {
+        "value": "#DD6B20",
+        "type": "color"
+      },
+      "critical": {
+        "value": "#C53030",
+        "type": "color"
+      },
+      "high-text": {
+        "value": "#AB5218",
+        "type": "color",
+        "description": "Text form of the high-risk orange. 5.31:1 on white."
+      }
+    },
+    "tint": {
+      "$description": "Tinted backgrounds for callouts, badges and selected rows. Each is paired with its matching *-text colour above, and every pairing clears 4.5:1.",
+      "info": {
+        "value": "#E8EFFE",
+        "type": "color"
+      },
+      "success": {
+        "value": "#E7F8F1",
+        "type": "color"
+      },
+      "warning": {
+        "value": "#FBF3E2",
+        "type": "color"
+      },
+      "high": {
+        "value": "#FDEEE2",
+        "type": "color"
+      },
+      "danger": {
+        "value": "#FBEAEA",
+        "type": "color"
+      }
+    }
+  },
+  "$accessibility": "Every foreground/background pair this system recommends was computed against the WCAG 2.1 relative-luminance formula and clears 4.5:1 (AA at any text size), in both light and dark themes. The three exceptions are explicitly labelled fill-only and must never carry text: mint-green #41CF97 (1.98:1 on white), amber #D69E2E (2.39:1 on white) and steel #8A94A6 (3.06:1 on white, permitted for large text and non-text UI only)."
+}

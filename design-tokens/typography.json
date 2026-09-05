@@ -1,0 +1,35 @@
+{
+  "$schema": "https://design-tokens.github.io/community-group/format/",
+  "$description": "Zigurat's public brand materials do not name a licensed typeface, so this pairing is a deliberate stand-in chosen to match the mark's tone (geometric, precise, engineered) using open Google Fonts that every team member can install without licensing friction. If the programme supplies an official brand book with a named typeface, change the three fontFamilies values here and in tokens.css — nothing else references a font name directly.",
+  "typography": {
+    "fontFamilies": {
+      "heading": { "value": "Poppins, 'Segoe UI', system-ui, sans-serif", "type": "fontFamily", "description": "Geometric sans. Echoes the logo's flat isometric planes. H1-H4, slide titles, section headers." },
+      "body":    { "value": "Inter, 'Segoe UI', system-ui, sans-serif", "type": "fontFamily", "description": "High legibility at small sizes and in dense tables. Body copy, UI, documentation." },
+      "mono":    { "value": "'JetBrains Mono', 'Cascadia Mono', Consolas, monospace", "type": "fontFamily", "description": "Code, IFC/BIM parameter names, GUIDs, quantity values." }
+    },
+    "fontWeights": {
+      "regular":  { "value": 400, "type": "fontWeight" },
+      "medium":   { "value": 500, "type": "fontWeight" },
+      "semibold": { "value": 600, "type": "fontWeight" },
+      "bold":     { "value": 700, "type": "fontWeight" }
+    },
+    "scale": {
+      "$description": "Major-third-ish scale on a 16px root. Line heights tighten as size grows.",
+      "display": { "value": { "fontSize": "3rem",     "lineHeight": 1.1,  "fontWeight": 700, "letterSpacing": "-0.02em", "fontFamily": "heading" }, "description": "Cover slides, report title pages only." },
+      "h1":      { "value": { "fontSize": "2.5rem",   "lineHeight": 1.15, "fontWeight": 700, "letterSpacing": "-0.02em", "fontFamily": "heading" } },
+      "h2":      { "value": { "fontSize": "2rem",     "lineHeight": 1.2,  "fontWeight": 700, "letterSpacing": "-0.01em", "fontFamily": "heading" } },
+      "h3":      { "value": { "fontSize": "1.5rem",   "lineHeight": 1.25, "fontWeight": 600, "letterSpacing": "-0.01em", "fontFamily": "heading" } },
+      "h4":      { "value": { "fontSize": "1.25rem",  "lineHeight": 1.3,  "fontWeight": 600, "letterSpacing": "0",       "fontFamily": "heading" } },
+      "body":    { "value": { "fontSize": "1rem",     "lineHeight": 1.6,  "fontWeight": 400, "letterSpacing": "0",       "fontFamily": "body"    } },
+      "small":   { "value": { "fontSize": "0.875rem", "lineHeight": 1.5,  "fontWeight": 400, "letterSpacing": "0",       "fontFamily": "body"    } },
+      "caption": { "value": { "fontSize": "0.75rem",  "lineHeight": 1.4,  "fontWeight": 500, "letterSpacing": "0.01em",  "fontFamily": "body"    }, "description": "Figure captions, table footnotes, axis labels." },
+      "overline":{ "value": { "fontSize": "0.6875rem","lineHeight": 1.3,  "fontWeight": 600, "letterSpacing": "0.08em",  "fontFamily": "body", "textTransform": "uppercase" }, "description": "Eyebrow labels above headings, card category tags." },
+      "code":    { "value": { "fontSize": "0.875rem", "lineHeight": 1.55, "fontWeight": 400, "letterSpacing": "0",       "fontFamily": "mono"    } }
+    },
+    "webfontImport": {
+      "value": "https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400&display=swap",
+      "type": "other",
+      "description": "Single request covering every weight this system actually uses. Do not add weights without adding them here too."
+    }
+  }
+}

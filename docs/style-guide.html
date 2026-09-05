@@ -1,0 +1,434 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Group 02 FMP — Design System</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400&display=swap">
+<link rel="stylesheet" href="../design-tokens/tokens.css">
+<link rel="stylesheet" href="../css/components.css">
+<style>
+  /* Page chrome for the style guide itself. Everything demonstrated below
+     comes from the token + component layers, not from here. */
+  .sg-header {
+    background: var(--color-surface);
+    border-bottom: var(--border-width) solid var(--color-border);
+    padding: var(--space-5) 0;
+  }
+  .sg-header__lockup { display: flex; align-items: center; gap: var(--space-4); flex-wrap: wrap; }
+  .sg-mark { width: 72px; height: auto; flex: none; }
+  .sg-section { padding-block: var(--space-6); border-bottom: var(--border-width) solid var(--color-border); }
+  .sg-section:last-child { border-bottom: 0; }
+  .sg-section > .container > h2 { margin-bottom: var(--space-2); }
+  .sg-lede { color: var(--color-text-muted); max-width: var(--content-max); margin-bottom: var(--space-5); }
+
+  .swatch { border-radius: var(--radius-md); overflow: hidden; border: var(--border-width) solid var(--color-border); background: var(--color-surface); }
+  .swatch__chip { height: 88px; display: flex; align-items: flex-end; padding: var(--space-2); }
+  .swatch__meta { padding: var(--space-3); }
+  .swatch__name { font-weight: var(--weight-semibold); font-size: var(--text-small); }
+  .swatch__hex  { font-family: var(--font-mono); font-size: var(--text-caption); color: var(--color-text-muted); text-transform: uppercase; }
+  .swatch__note { font-size: var(--text-caption); color: var(--color-text-muted); margin-top: var(--space-1); }
+  .swatch__ratio { font-family: var(--font-mono); font-size: var(--text-caption); font-weight: var(--weight-medium); }
+
+  .type-row { display: grid; grid-template-columns: 160px 1fr; gap: var(--space-4); padding-block: var(--space-3); border-bottom: var(--border-width) solid var(--color-border); align-items: baseline; }
+  .type-row:last-child { border-bottom: 0; }
+  .type-row__spec { font-family: var(--font-mono); font-size: var(--text-caption); color: var(--color-text-muted); }
+
+  .space-bar { background: var(--color-accent); height: 1rem; border-radius: var(--radius-sm); }
+  .space-row { display: grid; grid-template-columns: 110px 1fr; gap: var(--space-3); align-items: center; padding-block: var(--space-2); }
+
+  .sg-toc { position: sticky; top: 0; background: var(--color-bg); border-bottom: var(--border-width) solid var(--color-border); padding: var(--space-2) 0; z-index: 10; }
+  .sg-toc a { font-size: var(--text-small); font-weight: var(--weight-medium); text-decoration: none; }
+  .do-dont { display: grid; gap: var(--space-4); grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
+</style>
+</head>
+<body>
+
+<header class="sg-header">
+  <div class="container">
+    <div class="sg-header__lockup">
+      <svg class="sg-mark" viewBox="0 0 128 104" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Zigurat mark">
+        <g fill="#1C60F3"><path d="M32 0 L64 16 L64 48 L32 32 Z"/><path d="M0 40 L64 72 L64 104 L0 72 Z"/></g>
+        <g fill="#41CF97"><path d="M96 0 L64 16 L64 48 L96 32 Z"/><path d="M128 40 L64 72 L64 104 L128 72 Z"/></g>
+      </svg>
+      <div>
+        <p class="overline" style="margin:0 0 var(--space-1)">ZIGURAT AI-AECO Master · MAICEN 0526 · Module 10</p>
+        <h1 style="margin:0">Group 02 — FMP Design System</h1>
+        <p class="text-muted" style="margin:var(--space-2) 0 0">AI-Powered BIM Value Engineering Assistant with Continuous Design-Stage Feedback</p>
+      </div>
+    </div>
+  </div>
+</header>
+
+<nav class="sg-toc">
+  <div class="container row">
+    <a href="#logo">Logo</a>
+    <a href="#colour">Colour</a>
+    <a href="#type">Type</a>
+    <a href="#space">Space &amp; shape</a>
+    <a href="#components">Components</a>
+    <a href="#patterns">Project patterns</a>
+    <a href="#a11y">Accessibility</a>
+  </div>
+</nav>
+
+<!-- ===================================================================== -->
+<section class="sg-section" id="logo">
+  <div class="container">
+    <h2>Logo</h2>
+    <p class="sg-lede">The mark is two stacked isometric steps — a ziggurat — split into a blue left face and a green right face on a true 2:1 axonometric slope. The vector version in <code>assets/logo/</code> was traced from the supplied bitmap and matches it to 98.8% of pixels; the remainder is antialiasing.</p>
+
+    <div class="grid grid--2">
+      <div class="card">
+        <p class="overline">Primary mark</p>
+        <div style="padding:var(--space-5); text-align:center; background:var(--color-surface); border-radius:var(--radius-md)">
+          <svg width="120" viewBox="0 0 128 104" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Zigurat mark, full colour">
+            <g fill="#1C60F3"><path d="M32 0 L64 16 L64 48 L32 32 Z"/><path d="M0 40 L64 72 L64 104 L0 72 Z"/></g>
+            <g fill="#41CF97"><path d="M96 0 L64 16 L64 48 L96 32 Z"/><path d="M128 40 L64 72 L64 104 L128 72 Z"/></g>
+          </svg>
+        </div>
+        <p class="caption" style="margin-top:var(--space-3)"><code>zigurat-mark.svg</code> — default. Use on white, off-white or charcoal.</p>
+      </div>
+
+      <div class="card" style="background:var(--neutral-charcoal); border-color:var(--neutral-graphite)">
+        <p class="overline" style="color:var(--neutral-steel)">Single colour, reversed</p>
+        <div style="padding:var(--space-5); text-align:center; color:var(--neutral-white)">
+          <svg width="120" viewBox="0 0 128 104" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Zigurat mark, single colour">
+            <g fill="currentColor"><path d="M32 0 L64 16 L64 48 L32 32 Z"/><path d="M0 40 L64 72 L64 104 L0 72 Z"/></g>
+            <g fill="currentColor" opacity="0.62"><path d="M96 0 L64 16 L64 48 L96 32 Z"/><path d="M128 40 L64 72 L64 104 L128 72 Z"/></g>
+          </svg>
+        </div>
+        <p class="caption" style="margin-top:var(--space-3); color:var(--neutral-steel)"><code style="background:var(--neutral-graphite); color:var(--neutral-silver)">zigurat-mark-mono.svg</code> — one-ink print, watermarks, busy photographic backgrounds. Inherits <code style="background:var(--neutral-graphite); color:var(--neutral-silver)">currentColor</code>.</p>
+      </div>
+    </div>
+
+    <h3 style="margin-top:var(--space-5)">Team lockup</h3>
+    <p class="sg-lede">Mark, rule and two-line signature. Use it on title slides, report covers and the repository README. Keep one step-height (16 units) of clear space on every side; below 180&nbsp;px wide, drop the text and use the mark alone.</p>
+    <div class="card" style="text-align:center; padding:var(--space-5)">
+      <img src="../assets/logo/fmp-group02-lockup.svg" alt="Group 02 — AI-Powered BIM Value Engineering Assistant" style="max-width:372px; width:100%">
+    </div>
+
+    <div class="callout callout--warning" style="margin-top:var(--space-5)">
+      <p class="callout__title">The mark is not ours</p>
+      <p>The Zigurat name and mark belong to Zigurat Global Institute of Technology. This repository reproduces them for academic use inside the MAICEN Final Master's Project. The lockup above names <em>Group 02</em> in our own typefaces and must never be presented as official institutional branding. See <code>docs/BRAND-NOTES.md</code>.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===================================================================== -->
+<section class="sg-section" id="colour">
+  <div class="container">
+    <h2>Colour</h2>
+    <p class="sg-lede">Both brand colours are pixel-exact samples from the supplied logo file — nothing was eyeballed. Every ratio quoted below was computed against the WCAG 2.1 formula, and the palette is built so that no combination we recommend falls under 4.5:1 for body text.</p>
+
+    <h3>Brand</h3>
+    <div class="grid grid--3" style="margin-bottom:var(--space-5)">
+      <div class="swatch">
+        <div class="swatch__chip" style="background:#1C60F3; color:#fff"><span class="swatch__ratio">5.23:1 on white</span></div>
+        <div class="swatch__meta">
+          <div class="swatch__name">Electric Blue</div>
+          <div class="swatch__hex">#1C60F3</div>
+          <p class="swatch__note">Primary. Actions, links, the first chart series. Passes AA for body text on white and for white text on itself.</p>
+        </div>
+      </div>
+      <div class="swatch">
+        <div class="swatch__chip" style="background:#41CF97; color:#1B1F23"><span class="swatch__ratio">1.98:1 on white</span></div>
+        <div class="swatch__meta">
+          <div class="swatch__name">Mint Green</div>
+          <div class="swatch__hex">#41CF97</div>
+          <p class="swatch__note"><strong>Fill only.</strong> Never set text in it on a light background. Charcoal on mint reaches 8.36:1, which is where it works.</p>
+        </div>
+      </div>
+      <div class="swatch">
+        <div class="swatch__chip" style="background:#1E7A57; color:#fff"><span class="swatch__ratio">5.28:1 on white</span></div>
+        <div class="swatch__meta">
+          <div class="swatch__name">Mint Green (text)</div>
+          <div class="swatch__hex">#1E7A57</div>
+          <p class="swatch__note">The green you use when green has to be <em>read</em>. Darkened until it clears AA on white <em>and</em> on its own tint (4.80:1), so a green badge is as legible as a green heading.</p>
+        </div>
+      </div>
+      <div class="swatch">
+        <div class="swatch__chip" style="background:#1449B8; color:#fff"><span class="swatch__ratio">7.85:1 on white</span></div>
+        <div class="swatch__meta">
+          <div class="swatch__name">Electric Blue Dark</div>
+          <div class="swatch__hex">#1449B8</div>
+          <p class="swatch__note">Hover, active and pressed states for primary.</p>
+        </div>
+      </div>
+      <div class="swatch">
+        <div class="swatch__chip" style="background:#7FA9F7; color:#1B1F23"><span class="swatch__ratio">7.04:1 on charcoal</span></div>
+        <div class="swatch__meta">
+          <div class="swatch__name">Electric Blue Pale</div>
+          <div class="swatch__hex">#7FA9F7</div>
+          <p class="swatch__note">Dark-theme text and links. The brand blue reaches only 3.17:1 on charcoal, so it never carries text there; #5B8DEF is kept as the dark-theme button fill.</p>
+        </div>
+      </div>
+      <div class="swatch">
+        <div class="swatch__chip" style="background:#E8EFFE; color:#1449B8"><span class="swatch__ratio">tint</span></div>
+        <div class="swatch__meta">
+          <div class="swatch__name">Electric Blue Tint</div>
+          <div class="swatch__hex">#E8EFFE</div>
+          <p class="swatch__note">Callout and selected-row backgrounds. Pairs with blue or charcoal text.</p>
+        </div>
+      </div>
+    </div>
+
+    <h3>Neutrals</h3>
+    <div class="grid grid--3" style="margin-bottom:var(--space-5)">
+      <div class="swatch"><div class="swatch__chip" style="background:#1B1F23; color:#fff"><span class="swatch__ratio">16.58:1</span></div><div class="swatch__meta"><div class="swatch__name">Charcoal</div><div class="swatch__hex">#1B1F23</div><p class="swatch__note">Body text on light. Page background on dark.</p></div></div>
+      <div class="swatch"><div class="swatch__chip" style="background:#4A5568; color:#fff"><span class="swatch__ratio">7.53:1</span></div><div class="swatch__meta"><div class="swatch__name">Slate</div><div class="swatch__hex">#4A5568</div><p class="swatch__note">Secondary text, captions, axis labels.</p></div></div>
+      <div class="swatch"><div class="swatch__chip" style="background:#8A94A6; color:#1B1F23"><span class="swatch__ratio">3.06:1</span></div><div class="swatch__meta"><div class="swatch__name">Steel</div><div class="swatch__hex">#8A94A6</div><p class="swatch__note">Placeholders, disabled states, gridlines. Not for body text.</p></div></div>
+      <div class="swatch"><div class="swatch__chip" style="background:#E2E8F0; color:#1B1F23"></div><div class="swatch__meta"><div class="swatch__name">Silver</div><div class="swatch__hex">#E2E8F0</div><p class="swatch__note">Borders, dividers, table rules.</p></div></div>
+      <div class="swatch"><div class="swatch__chip" style="background:#F7F9FA; color:#1B1F23"></div><div class="swatch__meta"><div class="swatch__name">Off-White</div><div class="swatch__hex">#F7F9FA</div><p class="swatch__note">Page background on light.</p></div></div>
+      <div class="swatch"><div class="swatch__chip" style="background:#FFFFFF; color:#1B1F23; box-shadow:inset 0 0 0 1px var(--color-border)"></div><div class="swatch__meta"><div class="swatch__name">White</div><div class="swatch__hex">#FFFFFF</div><p class="swatch__note">Cards and surfaces on light.</p></div></div>
+    </div>
+
+    <h3>Value-risk scale</h3>
+    <p class="sg-lede">The project's own categorical scale, for risk badges, the value register and heatmap legends. Colour never carries the meaning alone — always pair it with the label or the dot.</p>
+    <div class="row" style="margin-bottom:var(--space-5)">
+      <span class="badge badge--risk" style="background:var(--color-accent-tint); color:var(--color-success-text)">Low</span>
+      <span class="badge badge--risk" style="background:var(--color-warning-tint); color:var(--color-warning-text)">Moderate</span>
+      <span class="badge badge--risk" style="background:var(--color-high-tint); color:var(--color-high-text)">High</span>
+      <span class="badge badge--risk" style="background:var(--color-danger-tint); color:var(--color-danger-text)">Critical</span>
+    </div>
+
+    <div class="callout callout--info">
+      <p class="callout__title">Use the semantic tokens, not the raw hexes</p>
+      <p>Write <code>var(--color-primary)</code>, not <code>#1C60F3</code>. The semantic layer is what re-points itself in dark theme; a hard-coded hex will not, and it will be the thing that breaks the night before submission.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===================================================================== -->
+<section class="sg-section" id="type">
+  <div class="container">
+    <h2>Type</h2>
+    <p class="sg-lede">Zigurat's public materials do not name a licensed typeface, so this pairing is a deliberate stand-in: geometric headings that echo the mark's flat planes, a highly legible body face for dense tables, and a mono for BIM parameters and IFC identifiers. All three are open Google Fonts, so every team member can install them without a licence.</p>
+
+    <div class="card">
+      <div class="type-row"><div class="type-row__spec">Display · Poppins 700<br>48px / 1.1</div><div><span class="display">Value Engineering</span></div></div>
+      <div class="type-row"><div class="type-row__spec">H1 · Poppins 700<br>40px / 1.15</div><div><h1 style="margin:0">Continuous design feedback</h1></div></div>
+      <div class="type-row"><div class="type-row__spec">H2 · Poppins 700<br>32px / 1.2</div><div><h2 style="margin:0">Schematic design stage</h2></div></div>
+      <div class="type-row"><div class="type-row__spec">H3 · Poppins 600<br>24px / 1.25</div><div><h3 style="margin:0">Material alternatives</h3></div></div>
+      <div class="type-row"><div class="type-row__spec">H4 · Poppins 600<br>20px / 1.3</div><div><h4 style="margin:0">Room schedule extract</h4></div></div>
+      <div class="type-row"><div class="type-row__spec">Body · Inter 400<br>16px / 1.6</div><div><p style="margin:0">The assistant monitors a live BIM model across Concept, Schematic and Detailed Design, flags decisions that reduce project value, and returns a running value score with prioritised recommendations.</p></div></div>
+      <div class="type-row"><div class="type-row__spec">Small · Inter 400<br>14px / 1.5</div><div><p class="small" style="margin:0">Bounded to design stages only — construction-phase interoperability is out of scope.</p></div></div>
+      <div class="type-row"><div class="type-row__spec">Caption · Inter 500<br>12px / 1.4</div><div><p class="caption" style="margin:0">Figure 4 — Value score trajectory across three design reviews.</p></div></div>
+      <div class="type-row"><div class="type-row__spec">Overline · Inter 600<br>11px / 0.08em</div><div><p class="overline" style="margin:0">Design-stage feedback loop</p></div></div>
+      <div class="type-row"><div class="type-row__spec">Code · JetBrains Mono<br>14px / 1.55</div><div><code>IfcSpace.GrossFloorArea</code> &nbsp; <code>Pset_WallCommon.LoadBearing</code></div></div>
+    </div>
+
+    <div class="callout callout--info">
+      <p class="callout__title">If the programme publishes an official typeface</p>
+      <p>Change the three <code>fontFamilies</code> values in <code>design-tokens/typography.json</code> and the three <code>--font-*</code> tokens in <code>tokens.css</code>. Nothing else in the system names a font directly, so that is the entire migration.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===================================================================== -->
+<section class="sg-section" id="space">
+  <div class="container">
+    <h2>Space &amp; shape</h2>
+    <p class="sg-lede">An 8&nbsp;px base with two half-steps for tight UI. Pick a step from the scale; do not invent a 13&nbsp;px gap because it looked right in one screenshot.</p>
+
+    <div class="grid grid--2">
+      <div class="card">
+        <p class="overline">Spacing scale</p>
+        <div class="space-row"><span class="mono small">--space-1 · 4px</span><div class="space-bar" style="width:4px"></div></div>
+        <div class="space-row"><span class="mono small">--space-2 · 8px</span><div class="space-bar" style="width:8px"></div></div>
+        <div class="space-row"><span class="mono small">--space-3 · 16px</span><div class="space-bar" style="width:16px"></div></div>
+        <div class="space-row"><span class="mono small">--space-4 · 24px</span><div class="space-bar" style="width:24px"></div></div>
+        <div class="space-row"><span class="mono small">--space-5 · 32px</span><div class="space-bar" style="width:32px"></div></div>
+        <div class="space-row"><span class="mono small">--space-6 · 48px</span><div class="space-bar" style="width:48px"></div></div>
+        <div class="space-row"><span class="mono small">--space-7 · 64px</span><div class="space-bar" style="width:64px"></div></div>
+        <div class="space-row"><span class="mono small">--space-8 · 96px</span><div class="space-bar" style="width:96px"></div></div>
+      </div>
+
+      <div class="card">
+        <p class="overline">Radius &amp; elevation</p>
+        <div class="row" style="margin-bottom:var(--space-4)">
+          <div style="width:72px;height:56px;background:var(--color-primary-tint);border:1px solid var(--color-border);border-radius:var(--radius-sm)"></div>
+          <div style="width:72px;height:56px;background:var(--color-primary-tint);border:1px solid var(--color-border);border-radius:var(--radius-md)"></div>
+          <div style="width:72px;height:56px;background:var(--color-primary-tint);border:1px solid var(--color-border);border-radius:var(--radius-lg)"></div>
+          <div style="width:72px;height:56px;background:var(--color-primary-tint);border:1px solid var(--color-border);border-radius:var(--radius-pill)"></div>
+        </div>
+        <p class="caption">4px inputs and code chips · 8px buttons and small cards · 16px cards and panels · pill for badges.</p>
+        <div class="row" style="margin-top:var(--space-4)">
+          <div style="width:110px;height:64px;background:var(--color-surface);border-radius:var(--radius-md);box-shadow:var(--shadow-card)"></div>
+          <div style="width:110px;height:64px;background:var(--color-surface);border-radius:var(--radius-md);box-shadow:var(--shadow-raised)"></div>
+        </div>
+        <p class="caption" style="margin-top:var(--space-2)"><code>--shadow-card</code> for resting surfaces · <code>--shadow-raised</code> for menus and modals. Two levels, no more.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================================================================== -->
+<section class="sg-section" id="components">
+  <div class="container">
+    <h2>Components</h2>
+    <p class="sg-lede">The shared set in <code>css/components.css</code>. Each one reads only from tokens, so it re-themes automatically.</p>
+
+    <h3>Buttons</h3>
+    <div class="row" style="margin-bottom:var(--space-5)">
+      <button class="btn btn--primary">Run value analysis</button>
+      <button class="btn btn--accent">Accept recommendation</button>
+      <button class="btn btn--secondary">Compare options</button>
+      <button class="btn btn--ghost">Dismiss</button>
+      <button class="btn btn--danger">Flag blocker</button>
+      <button class="btn btn--primary" disabled>Disabled</button>
+    </div>
+
+    <h3>Badges</h3>
+    <div class="row" style="margin-bottom:var(--space-5)">
+      <span class="badge badge--info">Concept</span>
+      <span class="badge badge--success">Value gain</span>
+      <span class="badge badge--warning">Needs review</span>
+      <span class="badge badge--danger">Value loss</span>
+      <span class="badge badge--neutral">Archived</span>
+    </div>
+
+    <h3>Callouts</h3>
+    <div class="callout callout--info"><p class="callout__title">Information</p><p>Client requirement CR-014 references a target budget that has not been updated since Concept.</p></div>
+    <div class="callout callout--success"><p class="callout__title">Value gain</p><p>Substituting the specified façade panel reduces cost by 6.2% with no change to the functional programme.</p></div>
+    <div class="callout callout--warning"><p class="callout__title">Needs review</p><p>Two design-review minutes disagree on the required ceiling height for the plant room.</p></div>
+    <div class="callout callout--danger"><p class="callout__title">Value loss</p><p>The Detailed Design structural grid change increases steel tonnage by 11% against a client priority weighted "cost — high".</p></div>
+
+    <h3 style="margin-top:var(--space-5)">Cards &amp; value score</h3>
+    <div class="grid grid--2" style="margin-bottom:var(--space-5)">
+      <div class="card card--spine is-critical">
+        <p class="overline">Value register · VR-032</p>
+        <h4 class="card__title">Structural grid revision</h4>
+        <p class="card__body">Increases steel tonnage 11% against a high-weighted cost priority. Raised at DR-03, unresolved.</p>
+        <div class="row" style="margin-top:var(--space-3)">
+          <span class="badge badge--danger badge--risk">Critical</span>
+          <span class="badge badge--neutral">Detailed Design</span>
+        </div>
+      </div>
+      <div class="card">
+        <p class="overline">Project value score</p>
+        <div class="row" style="align-items:flex-end; gap:var(--space-4)">
+          <div class="score">
+            <span class="score__value">72</span>
+            <span class="score__label">of 100</span>
+          </div>
+          <span class="score__delta is-down">▼ 8 since DR-02</span>
+        </div>
+        <div class="meter" style="margin-top:var(--space-4)" role="img" aria-label="Value score 72 of 100">
+          <div class="meter__fill" style="width:72%"></div>
+        </div>
+        <p class="caption" style="margin-top:var(--space-2)">Weighted across cost, function and sustainability impact.</p>
+      </div>
+    </div>
+
+    <h3>Table</h3>
+    <div class="card table-scroll">
+      <table class="table">
+        <caption class="visually-hidden">Value register extract</caption>
+        <thead>
+          <tr><th scope="col">Ref</th><th scope="col">Design decision</th><th scope="col">Stage</th><th scope="col">Risk</th><th scope="col" class="num">Cost Δ</th></tr>
+        </thead>
+        <tbody>
+          <tr><td class="mono">VR-014</td><td>Façade panel substitution</td><td>Schematic</td><td><span class="badge badge--success badge--risk">Low</span></td><td class="num">−6.2%</td></tr>
+          <tr><td class="mono">VR-021</td><td>Plant room ceiling height</td><td>Schematic</td><td><span class="badge badge--warning badge--risk">Moderate</span></td><td class="num">+1.4%</td></tr>
+          <tr><td class="mono">VR-032</td><td>Structural grid revision</td><td>Detailed</td><td><span class="badge badge--danger badge--risk">Critical</span></td><td class="num">+11.0%</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ===================================================================== -->
+<section class="sg-section" id="patterns">
+  <div class="container">
+    <h2>Project patterns</h2>
+    <p class="sg-lede">Conventions specific to this FMP, so five people producing slides, notebooks and a report separately still produce one thing.</p>
+
+    <div class="do-dont">
+      <div class="card" style="border-left:4px solid var(--color-success)">
+        <p class="overline" style="color:var(--color-success-text)">Do</p>
+        <ul class="stack" style="padding-left:1.2em; margin:0">
+          <li>Use <code>--series-1</code>…<code>--series-6</code> in order for chart series, so the same variable is the same colour in every deliverable.</li>
+          <li>Pair every risk colour with its text label or dot.</li>
+          <li>Set BIM parameters, IFC classes and GUIDs in the mono face.</li>
+          <li>Right-align numeric columns and use <code>font-variant-numeric: tabular-nums</code>.</li>
+          <li>Name figures <code>fig-NN-short-slug.svg</code> and keep them vector where possible.</li>
+        </ul>
+      </div>
+      <div class="card" style="border-left:4px solid var(--color-danger)">
+        <p class="overline" style="color:var(--color-danger-text)">Don't</p>
+        <ul class="stack" style="padding-left:1.2em; margin:0">
+          <li>Set mint green text on a white background — it is 1.98:1 and effectively unreadable.</li>
+          <li>Introduce a sixth heading size because a slide felt crowded.</li>
+          <li>Use red/green alone to distinguish two chart series.</li>
+          <li>Paste a hex into a notebook plot; import the token values instead.</li>
+          <li>Stretch, recolour, rotate or add effects to the mark.</li>
+        </ul>
+      </div>
+    </div>
+
+    <h3 style="margin-top:var(--space-5)">Chart series</h3>
+    <div class="card">
+      <div class="row">
+        <span class="row" style="gap:var(--space-2)"><span style="width:20px;height:20px;border-radius:var(--radius-sm);background:var(--series-1)"></span> <span class="small mono">--series-1 #1C60F3</span></span>
+        <span class="row" style="gap:var(--space-2)"><span style="width:20px;height:20px;border-radius:var(--radius-sm);background:var(--series-2)"></span> <span class="small mono">--series-2 #41CF97</span></span>
+        <span class="row" style="gap:var(--space-2)"><span style="width:20px;height:20px;border-radius:var(--radius-sm);background:var(--series-3)"></span> <span class="small mono">--series-3 #7B4FE0</span></span>
+        <span class="row" style="gap:var(--space-2)"><span style="width:20px;height:20px;border-radius:var(--radius-sm);background:var(--series-4)"></span> <span class="small mono">--series-4 #DD6B20</span></span>
+        <span class="row" style="gap:var(--space-2)"><span style="width:20px;height:20px;border-radius:var(--radius-sm);background:var(--series-5)"></span> <span class="small mono">--series-5 #4A5568</span></span>
+        <span class="row" style="gap:var(--space-2)"><span style="width:20px;height:20px;border-radius:var(--radius-sm);background:var(--series-6)"></span> <span class="small mono">--series-6 #17A2B8</span></span>
+      </div>
+      <p class="caption" style="margin-top:var(--space-3)">Two series: 1 and 2 — the brand pair. Three or more: continue in order. Beyond six, aggregate rather than adding colours.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===================================================================== -->
+<section class="sg-section" id="a11y">
+  <div class="container">
+    <h2>Accessibility</h2>
+    <p class="sg-lede">These are not aspirations — every ratio below was computed against the WCAG 2.1 relative-luminance formula for the exact hex pairs in the token file.</p>
+
+    <div class="card table-scroll">
+      <table class="table">
+        <thead><tr><th scope="col">Foreground</th><th scope="col">Background</th><th scope="col" class="num">Ratio</th><th scope="col">Verdict</th></tr></thead>
+        <tbody>
+          <tr><td class="mono">#1B1F23 charcoal</td><td class="mono">#FFFFFF</td><td class="num">16.58:1</td><td><span class="badge badge--success">AAA</span></td></tr>
+          <tr><td class="mono">#4A5568 slate</td><td class="mono">#FFFFFF</td><td class="num">7.53:1</td><td><span class="badge badge--success">AAA</span></td></tr>
+          <tr><td class="mono">#1C60F3 blue</td><td class="mono">#FFFFFF</td><td class="num">5.23:1</td><td><span class="badge badge--success">AA</span></td></tr>
+          <tr><td class="mono">#FFFFFF</td><td class="mono">#1C60F3 blue</td><td class="num">5.23:1</td><td><span class="badge badge--success">AA</span></td></tr>
+          <tr><td class="mono">#1E7A57 green-text</td><td class="mono">#FFFFFF</td><td class="num">5.28:1</td><td><span class="badge badge--success">AA</span></td></tr>
+          <tr><td class="mono">#1E7A57 green-text</td><td class="mono">#E7F8F1 mint tint</td><td class="num">4.80:1</td><td><span class="badge badge--success">AA</span></td></tr>
+          <tr><td class="mono">#1B1F23 charcoal</td><td class="mono">#41CF97 mint</td><td class="num">8.36:1</td><td><span class="badge badge--success">AAA</span></td></tr>
+          <tr><td class="mono">#C53030 danger</td><td class="mono">#FFFFFF</td><td class="num">5.47:1</td><td><span class="badge badge--success">AA</span></td></tr>
+          <tr><td class="mono">#8C651C warning-text</td><td class="mono">#FFFFFF</td><td class="num">5.26:1</td><td><span class="badge badge--success">AA</span></td></tr>
+          <tr><td class="mono">#8C651C warning-text</td><td class="mono">#FBF3E2 amber tint</td><td class="num">4.76:1</td><td><span class="badge badge--success">AA</span></td></tr>
+          <tr><td class="mono">#AB5218 high-text</td><td class="mono">#FDEEE2 orange tint</td><td class="num">4.68:1</td><td><span class="badge badge--success">AA</span></td></tr>
+          <tr><td class="mono">#C53030 danger</td><td class="mono">#FBEAEA danger tint</td><td class="num">4.70:1</td><td><span class="badge badge--success">AA</span></td></tr>
+          <tr><td class="mono">#1C60F3 blue</td><td class="mono">#E8EFFE blue tint</td><td class="num">4.53:1</td><td><span class="badge badge--success">AA</span></td></tr>
+          <tr><td class="mono">#7FA9F7 blue-pale</td><td class="mono">#1B1F23 charcoal</td><td class="num">7.04:1</td><td><span class="badge badge--success">AAA</span></td></tr>
+          <tr><td class="mono">#7FA9F7 blue-pale</td><td class="mono">#2D3339 graphite</td><td class="num">5.43:1</td><td><span class="badge badge--success">AA</span></td></tr>
+          <tr><td class="mono">#98A1B1 steel-lite</td><td class="mono">#2D3339 graphite</td><td class="num">4.91:1</td><td><span class="badge badge--success">AA</span></td></tr>
+          <tr><td class="mono">#E58F8F danger-dark</td><td class="mono">#2D3339 graphite</td><td class="num">5.27:1</td><td><span class="badge badge--success">AA</span></td></tr>
+          <tr><td class="mono">#41CF97 mint</td><td class="mono">#1B1F23 charcoal</td><td class="num">8.36:1</td><td><span class="badge badge--success">AAA</span></td></tr>
+          <tr><td class="mono">#41CF97 mint</td><td class="mono">#FFFFFF</td><td class="num">1.98:1</td><td><span class="badge badge--danger">Never for text</span></td></tr>
+          <tr><td class="mono">#D69E2E amber</td><td class="mono">#FFFFFF</td><td class="num">2.39:1</td><td><span class="badge badge--danger">Fill only</span></td></tr>
+          <tr><td class="mono">#8A94A6 steel</td><td class="mono">#FFFFFF</td><td class="num">3.06:1</td><td><span class="badge badge--warning">Large text / non-text</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="callout callout--info" style="margin-top:var(--space-5)">
+      <p class="callout__title">Three rules that cover most of it</p>
+      <p>Colour never carries meaning alone — pair it with a label, icon or dot. Focus is always visible: the shared <code>:focus-visible</code> ring is defined once in <code>components.css</code>, so never write <code>outline: none</code> without a replacement. And motion respects <code>prefers-reduced-motion</code>, which the token file already handles by zeroing both durations.</p>
+    </div>
+  </div>
+</section>
+
+<footer class="container" style="padding-block:var(--space-6)">
+  <p class="caption">Group 02 · MAICEN 0526 Module 10 · Omar Elsayed, Silvana Abou Shakra, Ahmed Elbasyouni, Asiya Begum, Valentina Vötter. Zigurat name and mark © Zigurat Global Institute of Technology, reproduced for academic use.</p>
+</footer>
+
+</body>
+</html>
