@@ -1,0 +1,250 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
+<title>M4U3 Façade VE Vision — Mini Report</title>
+<style>
+:root{--blue:#1C60F3;--mint:#41CF97;--mint-text:#1E7A57;--orange:#DD6B20;
+ --charcoal:#1B1F23;--slate:#4A5568;--silver:#E2E8F0;--offwhite:#F7F9FA;--amber-text:#8A5A00}
+*{box-sizing:border-box;margin:0;padding:0}
+@page{size:A4;margin:0}
+body{font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;color:var(--charcoal);
+ -webkit-print-color-adjust:exact;print-color-adjust:exact}
+.page{width:210mm;height:297mm;padding:11mm 14mm 11mm;position:relative;
+ page-break-after:always;overflow:hidden;background:#fff}
+.page:last-child{page-break-after:auto}
+.page::before{content:"";position:absolute;top:0;left:0;right:0;height:3.2mm;
+ background:linear-gradient(90deg,var(--blue) 0 62%,var(--mint) 62% 100%)}
+.masthead{border-bottom:1.6px solid var(--charcoal);padding-bottom:3mm;margin-bottom:4mm}
+.eyebrow{font-size:7.6pt;letter-spacing:.15em;text-transform:uppercase;color:var(--blue);font-weight:700}
+h1{font-size:17.5pt;line-height:1.12;letter-spacing:-.015em;margin:2mm 0 1.6mm}
+.byline{font-size:8.6pt;color:var(--slate)}
+h2{font-size:9.8pt;letter-spacing:-.005em;margin:3mm 0 1.4mm;padding-bottom:1mm;
+ border-bottom:1px solid var(--silver)}
+h2:first-of-type{margin-top:0}
+h3{font-size:8.5pt;margin:2.4mm 0 1mm;color:var(--charcoal)}
+p,li{font-size:8pt;line-height:1.4;color:var(--slate);margin-bottom:1.8mm}
+strong{color:var(--charcoal);font-weight:600}
+.cols2{display:flex;gap:7mm}
+.cols2>div{flex:1;min-width:0}
+table{width:100%;border-collapse:collapse;font-size:7.6pt;margin:1.4mm 0 2mm}
+th{text-align:left;font-size:7.2pt;letter-spacing:.07em;text-transform:uppercase;color:var(--slate);
+ border-bottom:1.3px solid var(--charcoal);padding:1.7mm 1.5mm;font-weight:600}
+td{padding:1.15mm 1.5mm;border-bottom:1px solid var(--silver);color:var(--slate)}
+td.n{text-align:right;font-variant-numeric:tabular-nums}
+tr.hi td{background:#FFF8F2;color:var(--charcoal);font-weight:600}
+code{font-family:'SF Mono',Menlo,Consolas,monospace;font-size:.88em;background:var(--silver);
+ padding:.3mm 1mm;border-radius:.8mm;color:var(--charcoal)}
+.kpi{display:flex;gap:2.5mm;margin:2mm 0 2.4mm}
+.kpi div{flex:1;background:var(--offwhite);border:1px solid var(--silver);border-radius:2mm;
+ padding:2.4mm 2mm;text-align:center}
+.kpi .v{font-size:13.5pt;font-weight:700;color:var(--blue);line-height:1;font-variant-numeric:tabular-nums}
+.kpi .v.mint{color:var(--mint-text)}
+.kpi .l{font-size:6.6pt;color:var(--slate);margin-top:1.6mm;letter-spacing:.05em;text-transform:uppercase}
+.box{border-radius:2mm;padding:2.6mm 3.2mm;margin:2mm 0;font-size:7.8pt;line-height:1.4}
+.box p{font-size:7.8pt;margin-bottom:1.3mm} .box p:last-child{margin-bottom:0}
+.box.warn{background:#FFF8F2;border:1px solid #F0C9A8;border-left:1.3mm solid var(--orange);color:var(--amber-text)}
+.box.warn strong{color:var(--amber-text)}
+.box.accent{background:var(--offwhite);border:1px solid var(--silver);border-left:1.3mm solid var(--blue)}
+.box.good{background:#F2FCF8;border:1px solid #BCE8D6;border-left:1.3mm solid var(--mint)}
+ol{padding-left:4.5mm} ol li{margin-bottom:1.5mm}
+ul{list-style:none} ul li{padding-left:4mm;position:relative;margin-bottom:1.3mm}
+ul li::before{content:"";position:absolute;left:0;top:1.5mm;width:1.7mm;height:1.7mm;border-radius:50%;background:var(--blue)}
+img{max-width:100%;border:1px solid var(--silver);border-radius:1.5mm;display:block}
+.cap{font-size:7.4pt;color:var(--slate);margin-top:1.5mm;line-height:1.4}
+.foot{position:absolute;bottom:5mm;left:14mm;right:14mm;display:flex;justify-content:space-between;
+ font-size:7.4pt;color:var(--slate);border-top:1px solid var(--silver);padding-top:2.5mm}
+</style></head><body>
+
+<!-- PAGE 1 -->
+<section class="page">
+  <div class="masthead">
+    <div class="eyebrow">Mini report · ZIGURAT AI-AECO Master · MAICEN 0526 · Module 4 Unit 3</div>
+    <h1>Façade Element Detection for Continuous Value Engineering</h1>
+    <div class="byline"><strong>Omar Elsayed</strong> · Group 02 · 20 September 2026 ·
+      <code>github.com/OmarEAbdelaal/m4u3-facade-ve-vision</code></div>
+  </div>
+
+  <h2>1 · Executive summary</h2>
+  <p>Group 02's Final Master's Project is an <strong>AI-Powered BIM Decision Support System for
+  Continuous Value Engineering</strong> — it reads the BIM model to tell a design team where cost is
+  accumulating while the design is still moving. Three situations put that truth outside the model:
+  at concept stage no façade has been modelled yet; a precedent or competitor building has no model
+  at all; and an as-built façade may have diverged from the model on site.</p>
+
+  <p>This unit supplies the <strong>perception component</strong>. A YOLOv8n detector trained on a
+  five-class façade contract returns the envelope elements present in a photograph or rendered
+  elevation, from which the VE engine derives Window-to-Wall Ratio and relative envelope cost — for
+  a building it has no model of. The envelope is the right target because it is typically
+  <strong>15–25 % of construction cost</strong> and the first package opened in a VE exercise.</p>
+
+  <div class="box accent">
+    <p><strong>Success criteria.</strong> Recover Window-to-Wall Ratio to within <strong>±10 %</strong>
+    of a human's reading of the same image, on frontal-to-30°-oblique daylight elevations of 3–10
+    storey buildings, in under <strong>2 seconds</strong> per image.</p>
+  </div>
+
+  <p>The one non-obvious decision is the headline metric. Because the VE read-out is computed from
+  <strong>box area</strong>, a box covering the right window but 20 % too large scores a clean hit
+  at IoU 0.50 while producing a 20 % cost error — <code>mAP50</code> is blind to precisely the
+  failure that costs this project money. The headline metric is therefore <strong>mAP50-95</strong>,
+  and localization drift is reported as a separate error category rather than folded into the true
+  positives.</p>
+
+  <h2>2 · Method</h2>
+  <div class="cols2">
+    <div>
+      <h3>Class contract</h3>
+      <p style="margin-bottom:1.5mm">Five classes with positional ids, enforced at load time:
+      <code>window</code>, <code>curtain_wall</code>, <code>door</code>, <code>balcony</code>,
+      <code>louvre_screen</code>. The <code>window</code>/<code>curtain_wall</code> boundary is
+      resolved by one procedural test — <em>can I trace unbroken glass across it?</em> — chosen so
+      two annotators cannot disagree. Three standing rules: no reflections; no neighbouring
+      buildings; partial and occluded elements <em>are</em> labelled to an 8 px floor. Boxes run to
+      the outer frame edge, because the frame is part of the purchased unit.</p>
+    </div>
+    <div>
+      <h3>Pipeline</h3>
+      <p style="margin-bottom:1.5mm">Transfer learning from COCO with <code>yolov8n.pt</code>;
+      <strong>30 epochs, batch 16, imgsz 640, seed 42</strong>, early stopping at patience 20.
+      Split <strong>80 / 20</strong> in Roboflow, so it is recorded against an immutable dataset
+      version. Every parameter lives in <code>src/config.py</code> and is read from there by the
+      notebooks, so the documentation cannot drift from the run; metrics files are generated by
+      <code>src/train.py</code>, and nothing in the repository quotes a number that was typed.</p>
+    </div>
+  </div>
+
+  <h3>SAM exploration</h3>
+  <p>SAM accelerated <code>curtain_wall</code>, <code>door</code> and <code>balcony</code> — large
+  convex regions with strong edges — by roughly 25–30 % of annotation time, conditional on human
+  review of every mask. It failed on the <code>window</code>/<code>curtain_wall</code> boundary,
+  because that distinction is a semantic rule about buildings, not a visual edge. More seriously, it
+  segments mirror-glass spandrel panels beautifully — those are opaque and must not be labelled at
+  all, so unreviewed auto-labelling would have injected this project's most expensive error class at
+  scale, with tight boxes and the appearance of quality. The useful outcome was the contract, not the time saved: the
+  unbroken-glass test exists <em>because</em> SAM exposed the ambiguity.</p>
+
+  <h2>3 · Results</h2>
+  <div class="kpi">
+    <div><div class="v">0.975</div><div class="l">Precision</div></div>
+    <div><div class="v">0.946</div><div class="l">Recall</div></div>
+    <div><div class="v">0.948</div><div class="l">mAP50</div></div>
+    <div><div class="v mint">0.879</div><div class="l">mAP50-95 · headline</div></div>
+  </div>
+  <table>
+    <tr><th>class</th><th class="n">val inst.</th><th class="n">precision</th><th class="n">recall</th><th class="n">mAP50</th><th class="n">mAP50-95</th></tr>
+    <tr><td><code>window</code></td><td class="n">316</td><td class="n">0.980</td><td class="n">0.951</td><td class="n">0.985</td><td class="n">0.951</td></tr>
+    <tr><td><code>curtain_wall</code></td><td class="n">37</td><td class="n">0.980</td><td class="n">1.000</td><td class="n">0.995</td><td class="n">0.976</td></tr>
+    <tr class="hi"><td><code>door</code></td><td class="n">24</td><td class="n">0.952</td><td class="n">0.830</td><td class="n">0.821</td><td class="n">0.809</td></tr>
+    <tr><td><code>balcony</code></td><td class="n">66</td><td class="n">0.994</td><td class="n">0.970</td><td class="n">0.965</td><td class="n">0.897</td></tr>
+    <tr class="hi"><td><code>louvre_screen</code></td><td class="n">48</td><td class="n">0.971</td><td class="n">0.979</td><td class="n">0.971</td><td class="n">0.764</td></tr>
+  </table>
+  <div class="box warn">
+    <p><strong>Verification run — not a performance claim.</strong> These figures come from the
+    procedural dataset in <code>src/synthetic_facades.py</code>, which exists so the notebooks run
+    end to end for a reader with no Roboflow account, no API key and no GPU. Synthetic façades are
+    axis-aligned and synthetically lit; the domain gap to a photograph is large. The banner is
+    generated from <code>DATASET_SOURCE</code>, so it cannot be left on by accident or removed by
+    hand.</p>
+  </div>
+  <div class="foot"><span>Façade Element Detection for Continuous Value Engineering · Omar Elsayed · Group 02</span><span>1 / 2</span></div>
+</section>
+
+<!-- PAGE 2 -->
+<section class="page">
+  <h2>4 · Interpretation — three findings</h2>
+
+  <h3>The metric you report decides what you think you built</h3>
+  <p><code>louvre_screen</code> scores mAP50 <strong>0.971</strong> and mAP50-95
+  <strong>0.764</strong> — a 21-point collapse. The model finds almost every louvre screen and boxes
+  almost none tightly; worst observed case <strong>+31 % box area</strong>. Thin, high-aspect-ratio
+  elements suffer roughly constant <em>absolute</em> regression error, which on a 12 px-tall element
+  is 25 % of the dimension. Every one of those boxes is a true positive at IoU 0.50, so a report
+  quoting mAP50 would record this as the second-best class. Measured strictly it is the worst — and
+  in a read-out computed from area, a +31 % box is a +31 % cost.</p>
+
+  <h3>Class imbalance appears as a systematic cost bias, not as noise</h3>
+  <p>At <strong>13.8 : 1</strong> between most and least frequent class, <code>door</code> — 96
+  training instances against 1 341 windows — is worst on every measure (recall 0.830, mAP50 0.821).
+  Both <code>door</code>→<code>window</code> confusions had near-perfect boxes (IoU 0.976, 0.970):
+  localised right, <em>named</em> wrong — a classifier problem caused by imbalance, not a
+  localisation one. Since <code>door</code> carries the second-highest unit rate, missing one in six
+  understates entrance cost systematically, so it does not average out across a portfolio.</p>
+
+  <h3>The dangerous error is the quiet one</h3>
+  <p>False negatives outnumber false positives 23 to 9. A false positive is challenged the moment a
+  human looks at the annotated image; a false negative produces a plausible number nobody questions.
+  That inverts the PPE logic, where recall dominates because a miss is a safety event. Here both
+  directions distort a <em>ratio</em>, and the miss is invisible — which is why every evidence render
+  shows the boxes, not only the numbers. The human check is the mitigation.</p>
+
+  <div class="cols2" style="margin-top:4mm">
+    <div>
+      <img src="img/errors.jpg" alt="Worst mined error cases" style="max-height:44mm;object-fit:contain">
+      <div class="cap">Worst false positives, false negatives, class confusions and localization
+      drifts, ranked automatically by <code>src/error_analysis.py</code> over the whole validation
+      split. Green = ground truth, red = wrong prediction, orange = missed instance.</div>
+    </div>
+    <div>
+      <table style="margin-top:0">
+        <tr><th>error type</th><th class="n">count</th><th class="n">% of errors</th></tr>
+        <tr><td>False negative</td><td class="n">23</td><td class="n">56.1 %</td></tr>
+        <tr><td>False positive</td><td class="n">9</td><td class="n">22.0 %</td></tr>
+        <tr class="hi"><td>Localization error</td><td class="n">6</td><td class="n">14.6 %</td></tr>
+        <tr><td>Class confusion</td><td class="n">3</td><td class="n">7.3 %</td></tr>
+      </table>
+      <div class="box good" style="margin-top:2mm">
+        <p><strong>Iteration plan — data, not a bigger model.</strong> Every failure above is a data
+        failure; a larger model trained on the same gaps learns the same wrong cues with more
+        capacity.</p>
+      </div>
+    </div>
+  </div>
+
+  <ol style="margin-top:1mm">
+    <li><strong>150 hard negatives</strong> of reflective opaque surfaces, added unlabelled. The
+    model learned "reflection gradient ⇒ glazing" and has never seen a counterexample — the only fix
+    thresholding cannot substitute for, since the model is confidently wrong, not uncertain.
+    <em>Measure:</em> zero-IoU <code>window</code> false positives fall from 2 to ≤ 1 per 24 images,
+    with no loss of recall.</li>
+    <li><strong>Rebalance <code>door</code> 96 → ~300 instances</strong> by targeted collection, not
+    oversampling — oversampling amplifies whatever is unrepresentative about the existing 96.
+    <em>Measure:</em> recall ≥ 0.92, imbalance below 6 : 1.</li>
+    <li><strong>Small-instance coverage plus an evidenced resolution decision.</strong> Sixteen
+    <code>window</code> misses cluster below 600 px². Add ~100 small-instance images, then compare
+    640 against 1280 and tiled inference — doubling resolution quadruples training time, so this is
+    a decision to evidence, not assume.</li>
+  </ol>
+
+  <h2>5 · Limitations</h2>
+  <div class="box warn">
+    <p><strong>This model is an assistive tool for preliminary screening only. It produces False
+    Negatives. It must NOT be used as the sole verifier for life-safety decisions.</strong></p>
+  </div>
+  <ul>
+    <li><strong>Not a quantity take-off.</strong> Outputs are uncalibrated pixel areas; without a
+    known scale they are not square metres and cannot become square metres — an unsolved problem,
+    not an engineering detail. Every output carries this basis string in its JSON.</li>
+    <li><strong>Not a compliance check, and not a BIM-vs-reality verifier</strong> — it cannot
+    measure a ratio in real units, and implements no camera pose or registration.</li>
+    <li><strong>Unmeasured outside its training distribution</strong> — heritage and vernacular
+    typologies, night, fog, extreme obliquity, heavy scaffolding. Unmeasured ≠ adequate.</li>
+    <li><strong>Synthetic-to-real gap.</strong> Published metrics describe the pipeline, not façade
+    detection. Expect materially lower figures on photographs.</li>
+    <li><strong>The validation set does double duty</strong> as early-stopping signal and reported
+    metric, so figures are mildly optimistic. The unseen-image pack is the mitigation.</li>
+  </ul>
+
+  <h2>6 · Governance &amp; licensing</h2>
+  <p><strong>Privacy by design.</strong> There is no <code>person</code> class and no
+  <code>vehicle</code> class. Data minimisation is applied <em>at the class contract</em>, so the
+  model is structurally incapable of identifying anyone — not filtered afterwards. No biometric
+  processing, and no client or employer imagery at any point.</p>
+  <p><strong>Human in the loop.</strong> Detections are a first pass reviewed by a qualified
+  architect or cost consultant before any figure reaches a client or a cost plan; source image,
+  weights version, threshold, timestamp and reviewer are logged. The model screens; it certifies
+  nothing. <strong>Licence:</strong> Apache-2.0, chosen over MIT for the explicit patent grant, with
+  dataset rights public / licensed under a per-source table. <strong>Upstream caveat:</strong>
+  Ultralytics YOLOv8 is AGPL-3.0 and fine-tuned weights inherit it, so commercial deployment requires
+  AGPL compliance or an Enterprise Licence — the most commonly missed licensing fact in YOLO
+  projects, recorded in <code>NOTICE</code>.</p>
+  <div class="foot"><span>Full repository, notebooks, evidence pack and governance checklist: <code>github.com/OmarEAbdelaal/m4u3-facade-ve-vision</code></span><span>2 / 2</span></div>
+</section>
+</body></html>

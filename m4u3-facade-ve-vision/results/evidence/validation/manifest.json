@@ -1,0 +1,2352 @@
+[
+  {
+    "file": "val_01_facade_valid_0097.jpg",
+    "source": "facade_valid_0097.jpg",
+    "detections": [
+      {
+        "class": "window",
+        "conf": 0.999,
+        "box": [
+          156.7,
+          396.8,
+          249.1,
+          468.6
+        ]
+      },
+      {
+        "class": "window",
+        "conf": 0.999,
+        "box": [
+          495.6,
+          396.7,
+          588.0,
+          468.6
+        ]
+      },
+      {
+        "class": "window",
+        "conf": 0.999,
+        "box": [
+          44.8,
+          302.0,
+          136.3,
+          372.2
+        ]
+      },
+      {
+        "class": "window",
+        "conf": 0.999,
+        "box": [
+          495.5,
+          302.0,
+          587.7,
+          372.3
+        ]
+      },
+      {
+        "class": "window",
+        "conf": 0.999,
+        "box": [
+          156.8,
+          302.5,
+          249.5,
+          372.6
+        ]
+      },
+      {
+        "class": "window",
+        "conf": 0.999,
+        "box": [
+          382.5,
+          302.0,
+          475.6,
+          372.3
+        ]
+      },
+      {
+        "class": "window",
+        "conf": 0.999,
+        "box": [
+          495.3,
+          492.6,
+          587.6,
+          563.5
+        ]
+      },
+      {
+        "class": "window",
+        "conf": 0.999,
+        "box": [
+          269.6,
+          302.2,
+          362.2,
+          372.5
+        ]
+      },
+      {
+        "class": "window",
+        "conf": 0.999,
+        "box": [
+          382.5,
+          492.1,
+          475.6,
+          563.4
+        ]
+      },
+      {
+        "class": "window",
+        "conf": 0.998,
+        "box": [
+          382.3,
+          397.4,
+          475.5,
+          468.5
+        ]
+      },
+      {
+        "class": "curtain_wall",
+        "conf": 0.998,
+        "box": [
+          42.1,
+          112.3,
+          582.8,
+          180.4
+        ]
+      },
+      {
+        "class": "window",
+        "conf": 0.997,
+        "box": [
+          269.5,
+          397.5,
+          362.1,
+          467.8
+        ]
+      },
+      {
+        "class": "curtain_wall",
+        "conf": 0.997,
+        "box": [
+          34.7,
+          207.9,
+          583.1,
+          276.0
+        ]
+      },
+      {
+        "class": "balcony",
+        "conf": 0.992,
+        "box": [
+          490.1,
+          457.1,
+          592.6,
+          482.0
+        ]
+      },
+      {
+        "class": "door",
+        "conf": 0.965,
+        "box": [
+          289.8,
+          499.9,
+          341.5,
+          573.8
+        ]
+      },
+      {
+        "class": "balcony",
+        "conf": 0.96,
+        "box": [
+          67.8,
+          162.7,
+          174.6,
+          191.0
+        ]
+      },
+      {
+        "class": "window",
+        "conf": 0.841,
+        "box": [
+          43.7,
+          397.7,
+          136.5,
+          464.5
+        ]
+      },
+      {
+        "class": "window",
+        "conf": 0.486,
+        "box": [
+          156.5,
+          492.5,
+          192.4,
+          564.6
+        ]
+      }
+    ],
+    "ve": {
+      "glazed_fraction_of_frame": 0.3784,
+      "envelope_cost_index": 255.4,
+      "counts": {
+        "window": 13,
+        "curtain_wall": 2,
+        "balcony": 2,
+        "door": 1
+      },
+      "basis": "uncalibrated pixel areas \u2014 relative screening signal, not a take-off"
+    }
+  },
+  {
+    "file": "val_02_facade_valid_0098.jpg",
+    "source": "facade_valid_0098.jpg",
+    "detections": [
+      {
+        "class": "curtain_wall",
+        "conf": 0.998,
+        "box": [
+          89.5,
+          302.3,
+          581.0,
+          375.7
+        ]
+      },
+      {
+        "class": "curtain_wall",
+        "conf": 0.997,
+        "box": [
+          84.8,
+          408.6,
+          579.8,
+          483.2
+        ]
+      },
+      {
+        "class": "curtain_wall",
+        "conf": 0.997,
+        "box": [
+          90.7,
+          196.8,
+          581.0,
+          271.2
+        ]
+      },
+      {
+        "class": "window",
+        "conf": 0.987,
+        "box": [
+          264.6,
+          89.1,
+          407.1,
+          166.5
+        ]
+      },
+      {
+        "class": "window",
+        "conf": 0.964,
+        "box": [
+          440.6,
+          512.5,
+          582.7,
+          590.0
+        ]
+      },
+      {
+        "class": "louvre_screen",
+        "conf": 0.955,
+        "box": [
+          87.1,
+          77.1,
+          231.0,
+          87.9
+        ]
+      },
+      {
+        "class": "window",
+        "conf": 0.949,
+        "box": [
+          87.1,
+          88.9,
+          228.4,
+          166.6
+        ]
+      },
+      {
+        "class": "window",
+        "conf": 0.901,
+        "box": [
+          87.4,
+          512.7,
+          193.4,
+          589.4
+        ]
+      },
+      {
+        "class": "door",
+        "conf": 0.805,
+        "box": [
+          294.8,
+          519.1,
+          376.4,
+          602.6
+        ]
+      },
+      {
+        "class": "window",
+        "conf": 0.531,
+        "box": [
+          295.4,
+          519.5,
+          376.4,
+          602.8
+        ]
+      },
+      {
+        "class": "balcony",
+        "conf": 0.495,
+        "box": [
+          435.4,
+          99.9,
+          591.9,
+          125.3
+        ]
+      }
+    ],
+    "ve": {
+      "glazed_fraction_of_frame": 0.3842,
+      "envelope_cost_index": 285.2,
+      "counts": {
+        "curtain_wall": 3,
+        "window": 5,
+        "louvre_screen": 1,
+        "door": 1,
+        "balcony": 1
+      },
+      "basis": "uncalibrated pixel areas \u2014 relative screening signal, not a take-off"
+    }
+  },
+  {
+    "file": "val_03_facade_valid_0099.jpg",
+    "source": "facade_valid_0099.jpg",
+    "detections": [
+      {
+        "class": "window",
+        "conf": 1.0,
+        "box": [
+          153.5,
+          166.7,
+          241.5,
+          248.3
+        ]
+      },
+      {
+        "class": "window",
+        "conf": 1.0,
+        "box": [
+          269.5,
+          166.1,
+          356.6,
+          250.1
+        ]
+      },
+      {
+        "class": "window",
+        "conf": 1.0,
+        "box": [
+          153.1,
+          375.4,
+          241.4,
+          456.2
+        ]
+      },
+      {
+        "class": "window",
+        "conf": 0.999,
+        "box": [
+          269.3,
+          269.9,
+          356.7,
+          353.6
+        ]
+      },
+      {
+        "class": "window",
+        "conf": 0.999,
+        "box": [
+          500.8,
+          166.6,
+          588.7,
+          248.6
+        ]
+      },
+      {
+        "class": "window",
+        "conf": 0.999,
+        "box": [
+          384.5,
+          166.5,
+          472.4,
+          248.4
+        ]
+      },
+      {
+        "class": "window",
+        "conf": 0.999,
+        "box": [
+          269.4,
+          375.9,
+          356.7,
+          456.9
+        ]
+      },
+      {
+        "class": "window",
+        "conf": 0.999,
+        "box": [
+          37.1,
+          166.2,
+          126.1,
+          248.5
+        ]
+      },
+      {
+        "class": "window",
+        "conf": 0.999,
+        "box": [
+          37.6,
+          270.4,
+          125.7,
+          352.9
+        ]
+      },
+      {
+        "class": "window",
+        "conf": 0.999,
+        "box": [
+          153.8,
+          270.4,
+          241.4,
+          353.0
+        ]
+      },
+      {
+        "class": "window",
+        "conf": 0.999,
+        "box": [
+          384.5,
+          270.2,
+          472.6,
+          353.5
+        ]
+      },
+      {
+        "class": "window",
+        "conf": 0.999,
+        "box": [
+          384.3,
+          375.7,
+          472.5,
+          457.6
+        ]
+      },
+      {
+        "class": "window",
+        "conf": 0.999,
+        "box": [
+          500.8,
+          375.8,
+          588.9,
+          457.0
+        ]
+      },
+      {
+        "class": "window",
+        "conf": 0.999,
+        "box": [
+          500.7,
+          270.6,
+          588.6,
+          352.9
+        ]
+      },
+      {
+        "class": "window",
+        "conf": 0.998,
+        "box": [
+          500.5,
+          479.4,
+          588.8,
+          561.1
+        ]
+      },
+      {
+        "class": "window",
+        "conf": 0.997,
+        "box": [
+          37.0,
+          375.5,
+          125.3,
+          462.3
+        ]
+      },
+      {
+        "class": "window",
+        "conf": 0.997,
+        "box": [
+          384.5,
+          479.5,
+          472.4,
+          561.7
+        ]
+      },
+      {
+        "class": "balcony",
+        "conf": 0.989,
+        "box": [
+          379.3,
+          341.7,
+          477.9,
+          367.9
+        ]
+      },
+      {
+        "class": "balcony",
+        "conf": 0.986,
+        "box": [
+          497.2,
+          445.6,
+          594.1,
+          471.7
+        ]
+      },
+      {
+        "class": "balcony",
+        "conf": 0.986,
+        "box": [
+          496.9,
+          341.5,
+          594.3,
+          367.7
+        ]
+      },
+      {
+        "class": "balcony",
+        "conf": 0.986,
+        "box": [
+          497.1,
+          236.3,
+          594.0,
+          262.8
+        ]
+      },
+      {
+        "class": "balcony",
+        "conf": 0.985,
+        "box": [
+          265.1,
+          445.6,
+          363.5,
+          471.7
+        ]
+      },
+      {
+        "class": "door",
+        "conf": 0.984,
+        "box": [
+          286.2,
+          489.3,
+          339.9,
+          570.9
+        ]
+      },
+      {
+        "class": "balcony",
+        "conf": 0.974,
+        "box": [
+          154.8,
+          445.8,
+          247.1,
+          471.5
+        ]
+      },
+      {
+        "class": "louvre_screen",
+        "conf": 0.962,
+        "box": [
+          35.7,
+          151.0,
+          125.7,
+          164.3
+        ]
+      },
+      {
+        "class": "window",
+        "conf": 0.922,
+        "box": [
+          152.6,
+          478.9,
+          241.6,
+          561.3
+        ]
+      },
+      {
+        "class": "louvre_screen",
+        "conf": 0.92,
+        "box": [
+          267.7,
+          250.5,
+          356.8,
+          268.4
+        ]
+      },
+      {
+        "class": "window",
+        "conf": 0.57,
+        "box": [
+          266.7,
+          82.2,
+          356.2,
+          88.6
+        ]
+      },
+      {
+        "class": "window",
+        "conf": 0.429,
+        "box": [
+          384.1,
+          81.8,
+          473.1,
+          84.9
+        ]
+      }
+    ],
+    "ve": {
+      "glazed_fraction_of_frame": 0.321,
+      "envelope_cost_index": 191.4,
+      "counts": {
+        "window": 20,
+        "balcony": 6,
+        "door": 1,
+        "louvre_screen": 2
+      },
+      "basis": "uncalibrated pixel areas \u2014 relative screening signal, not a take-off"
+    }
+  },
+  {
+    "file": "val_04_facade_valid_0100.jpg",
+    "source": "facade_valid_0100.jpg",
+    "detections": [
+      {
+        "class": "window",
+        "conf": 0.993,
+        "box": [
+          161.2,
+          318.3,
+          228.7,
+          376.4
+        ]
+      },
+      {
+        "class": "window",
+        "conf": 0.992,
+        "box": [
+          344.6,
+          244.4,
+          411.5,
+          299.9
+        ]
+      },
+      {
+        "class": "window",
+        "conf": 0.992,
+        "box": [
+          527.2,
+          169.5,
+          595.2,
+          225.0
+        ]
+      },
+      {
+        "class": "window",
+        "conf": 0.992,
+        "box": [
+          161.3,
+          169.6,
+          228.4,
+          226.9
+        ]
+      },
+      {
+        "class": "window",
+        "conf": 0.991,
+        "box": [
+          70.0,
+          394.1,
+          137.3,
+          450.2
+        ]
+      },
+      {
+        "class": "window",
+        "conf": 0.989,
+        "box": [
+          527.5,
+          393.6,
+          594.4,
+          450.6
+        ]
+      },
+      {
+        "class": "window",
+        "conf": 0.989,
+        "box": [
+          161.0,
+          468.4,
+          228.3,
+          525.5
+        ]
+      },
+      {
+        "class": "window",
+        "conf": 0.989,
+        "box": [
+          343.9,
+          169.7,
+          411.5,
+          226.4
+        ]
+      },
+      {
+        "class": "window",
+        "conf": 0.988,
+        "box": [
+          436.9,
+          393.2,
+          503.6,
+          450.3
+        ]
+      },
+      {
+        "class": "window",
+        "conf": 0.987,
+        "box": [
+          253.5,
+          169.4,
+          320.1,
+          226.5
+        ]
+      },
+      {
+        "class": "balcony",
+        "conf": 0.986,
+        "box": [
+          523.0,
+          214.4,
+          598.9,
+          241.3
+        ]
+      },
+      {
+        "class": "window",
+        "conf": 0.986,
+        "box": [
+          344.2,
+          94.4,
+          411.6,
+          150.8
+        ]
+      },
+      {
+        "class": "window",
+        "conf": 0.985,
+        "box": [
+          436.9,
+          94.5,
+          502.8,
+          147.7
+        ]
+      },
+      {
+        "class": "window",
+        "conf": 0.985,
+        "box": [
+          161.2,
+          543.5,
+          228.5,
+          600.5
+        ]
+      },
+      {
+        "class": "window",
+        "conf": 0.985,
+        "box": [
+          344.9,
+          468.5,
+          411.7,
+          527.9
+        ]
+      },
+      {
+        "class": "window",
+        "conf": 0.984,
+        "box": [
+          253.6,
+          244.4,
+          320.1,
+          301.6
+        ]
+      },
+      {
+        "class": "window",
+        "conf": 0.984,
+        "box": [
+          253.7,
+          318.8,
+          320.1,
+          378.8
+        ]
+      },
+      {
+        "class": "window",
+        "conf": 0.984,
+        "box": [
+          436.8,
+          468.5,
+          503.7,
+          525.4
+        ]
+      },
+      {
+        "class": "window",
+        "conf": 0.984,
+        "box": [
+          527.2,
+          244.1,
+          594.8,
+          301.7
+        ]
+      },
+      {
+        "class": "window",
+        "conf": 0.983,
+        "box": [
+          70.5,
+          244.5,
+          137.2,
+          301.3
+        ]
+      },
+      {
+        "class": "window",
+        "conf": 0.983,
+        "box": [
+          437.3,
+          318.7,
+          503.5,
+          376.4
+        ]
+      },
+      {
+        "class": "window",
+        "conf": 0.982,
+        "box": [
+          69.5,
+          94.3,
+          136.9,
+          149.0
+        ]
+      },
+      {
+        "class": "window",
+        "conf": 0.982,
+        "box": [
+          437.0,
+          244.7,
+          503.4,
+          301.3
+        ]
+      },
+      {
+        "class": "window",
+        "conf": 0.982,
+        "box": [
+          70.7,
+          468.5,
+          137.2,
+          525.3
+        ]
+      },
+      {
+        "class": "window",
+        "conf": 0.981,
+        "box": [
+          70.4,
+          170.1,
+          137.1,
+          226.1
+        ]
+      },
+      {
+        "class": "window",
+        "conf": 0.979,
+        "box": [
+          527.2,
+          543.5,
+          594.5,
+          600.5
+        ]
+      },
+      {
+        "class": "window",
+        "conf": 0.978,
+        "box": [
+          70.4,
+          318.5,
+          136.8,
+          377.8
+        ]
+      },
+      {
+        "class": "window",
+        "conf": 0.976,
+        "box": [
+          253.5,
+          94.8,
+          320.3,
+          151.7
+        ]
+      },
+      {
+        "class": "window",
+        "conf": 0.976,
+        "box": [
+          527.3,
+          94.4,
+          594.5,
+          151.8
+        ]
+      },
+      {
+        "class": "window",
+        "conf": 0.976,
+        "box": [
+          253.5,
+          468.9,
+          320.3,
+          525.8
+        ]
+      },
+      {
+        "class": "window",
+        "conf": 0.975,
+        "box": [
+          343.9,
+          318.4,
+          411.2,
+          376.4
+        ]
+      },
+      {
+        "class": "window",
+        "conf": 0.972,
+        "box": [
+          70.5,
+          543.5,
+          137.3,
+          600.4
+        ]
+      },
+      {
+        "class": "window",
+        "conf": 0.97,
+        "box": [
+          436.6,
+          170.5,
+          503.2,
+          226.8
+        ]
+      },
+      {
+        "class": "window",
+        "conf": 0.969,
+        "box": [
+          253.5,
+          394.3,
+          320.4,
+          450.7
+        ]
+      },
+      {
+        "class": "balcony",
+        "conf": 0.969,
+        "box": [
+          338.8,
+          289.3,
+          417.2,
+          316.0
+        ]
+      },
+      {
+        "class": "window",
+        "conf": 0.967,
+        "box": [
+          253.1,
+          543.3,
+          320.4,
+          600.5
+        ]
+      },
+      {
+        "class": "balcony",
+        "conf": 0.951,
+        "box": [
+          66.0,
+          139.2,
+          142.0,
+          164.4
+        ]
+      },
+      {
+        "class": "balcony",
+        "conf": 0.949,
+        "box": [
+          340.4,
+          139.0,
+          416.6,
+          165.5
+        ]
+      },
+      {
+        "class": "balcony",
+        "conf": 0.949,
+        "box": [
+          156.0,
+          364.2,
+          233.9,
+          391.3
+        ]
+      },
+      {
+        "class": "louvre_screen",
+        "conf": 0.926,
+        "box": [
+          69.9,
+          376.7,
+          138.3,
+          392.1
+        ]
+      },
+      {
+        "class": "louvre_screen",
+        "conf": 0.827,
+        "box": [
+          161.2,
+          156.2,
+          228.7,
+          167.4
+        ]
+      },
+      {
+        "class": "louvre_screen",
+        "conf": 0.819,
+        "box": [
+          253.3,
+          376.1,
+          321.3,
+          391.9
+        ]
+      },
+      {
+        "class": "louvre_screen",
+        "conf": 0.718,
+        "box": [
+          67.4,
+          159.5,
+          138.8,
+          168.5
+        ]
+      },
+      {
+        "class": "louvre_screen",
+        "conf": 0.716,
+        "box": [
+          434.7,
+          155.6,
+          504.5,
+          167.8
+        ]
+      },
+      {
+        "class": "balcony",
+        "conf": 0.6,
+        "box": [
+          434.2,
+          139.3,
+          508.7,
+          160.3
+        ]
+      }
+    ],
+    "ve": {
+      "glazed_fraction_of_frame": 0.3164,
+      "envelope_cost_index": 180.0,
+      "counts": {
+        "window": 34,
+        "balcony": 6,
+        "louvre_screen": 5
+      },
+      "basis": "uncalibrated pixel areas \u2014 relative screening signal, not a take-off"
+    }
+  },
+  {
+    "file": "val_05_facade_valid_0101.jpg",
+    "source": "facade_valid_0101.jpg",
+    "detections": [
+      {
+        "class": "curtain_wall",
+        "conf": 0.999,
+        "box": [
+          55.7,
+          74.0,
+          607.6,
+          164.7
+        ]
+      },
+      {
+        "class": "window",
+        "conf": 0.999,
+        "box": [
+          514.7,
+          471.6,
+          610.8,
+          566.3
+        ]
+      },
+      {
+        "class": "curtain_wall",
+        "conf": 0.999,
+        "box": [
+          55.7,
+          206.6,
+          607.7,
+          297.8
+        ]
+      },
+      {
+        "class": "window",
+        "conf": 0.998,
+        "box": [
+          54.4,
+          471.8,
+          150.3,
+          566.2
+        ]
+      },
+      {
+        "class": "window",
+        "conf": 0.998,
+        "box": [
+          399.4,
+          471.7,
+          495.7,
+          566.1
+        ]
+      },
+      {
+        "class": "curtain_wall",
+        "conf": 0.996,
+        "box": [
+          57.1,
+          340.4,
+          611.4,
+          431.7
+        ]
+      },
+      {
+        "class": "door",
+        "conf": 0.977,
+        "box": [
+          305.2,
+          477.2,
+          358.7,
+          583.0
+        ]
+      },
+      {
+        "class": "balcony",
+        "conf": 0.941,
+        "box": [
+          67.8,
+          146.9,
+          205.6,
+          173.4
+        ]
+      }
+    ],
+    "ve": {
+      "glazed_fraction_of_frame": 0.4352,
+      "envelope_cost_index": 334.6,
+      "counts": {
+        "curtain_wall": 3,
+        "window": 3,
+        "door": 1,
+        "balcony": 1
+      },
+      "basis": "uncalibrated pixel areas \u2014 relative screening signal, not a take-off"
+    }
+  },
+  {
+    "file": "val_06_facade_valid_0102.jpg",
+    "source": "facade_valid_0102.jpg",
+    "detections": [
+      {
+        "class": "window",
+        "conf": 1.0,
+        "box": [
+          201.7,
+          120.2,
+          314.4,
+          192.6
+        ]
+      },
+      {
+        "class": "window",
+        "conf": 0.999,
+        "box": [
+          338.2,
+          422.5,
+          451.1,
+          496.0
+        ]
+      },
+      {
+        "class": "window",
+        "conf": 0.999,
+        "box": [
+          64.2,
+          422.9,
+          176.8,
+          495.6
+        ]
+      },
+      {
+        "class": "window",
+        "conf": 0.999,
+        "box": [
+          476.5,
+          422.7,
+          588.6,
+          495.1
+        ]
+      },
+      {
+        "class": "window",
+        "conf": 0.999,
+        "box": [
+          476.4,
+          120.2,
+          588.5,
+          193.6
+        ]
+      },
+      {
+        "class": "window",
+        "conf": 0.999,
+        "box": [
+          64.3,
+          120.2,
+          176.7,
+          193.5
+        ]
+      },
+      {
+        "class": "window",
+        "conf": 0.999,
+        "box": [
+          201.5,
+          422.8,
+          314.4,
+          495.3
+        ]
+      },
+      {
+        "class": "window",
+        "conf": 0.998,
+        "box": [
+          201.5,
+          221.6,
+          314.6,
+          294.3
+        ]
+      },
+      {
+        "class": "window",
+        "conf": 0.998,
+        "box": [
+          338.3,
+          221.6,
+          451.4,
+          294.2
+        ]
+      },
+      {
+        "class": "window",
+        "conf": 0.998,
+        "box": [
+          201.5,
+          524.0,
+          314.8,
+          596.8
+        ]
+      },
+      {
+        "class": "window",
+        "conf": 0.997,
+        "box": [
+          201.5,
+          322.4,
+          315.0,
+          394.8
+        ]
+      },
+      {
+        "class": "window",
+        "conf": 0.997,
+        "box": [
+          64.0,
+          221.2,
+          177.0,
+          294.1
+        ]
+      },
+      {
+        "class": "window",
+        "conf": 0.996,
+        "box": [
+          476.3,
+          322.7,
+          588.4,
+          394.1
+        ]
+      },
+      {
+        "class": "window",
+        "conf": 0.996,
+        "box": [
+          63.8,
+          322.4,
+          176.5,
+          395.5
+        ]
+      },
+      {
+        "class": "window",
+        "conf": 0.995,
+        "box": [
+          338.1,
+          322.0,
+          450.7,
+          394.3
+        ]
+      },
+      {
+        "class": "window",
+        "conf": 0.995,
+        "box": [
+          476.5,
+          221.2,
+          588.7,
+          293.8
+        ]
+      },
+      {
+        "class": "balcony",
+        "conf": 0.993,
+        "box": [
+          196.6,
+          382.2,
+          319.8,
+          408.4
+        ]
+      },
+      {
+        "class": "window",
+        "conf": 0.992,
+        "box": [
+          64.1,
+          523.3,
+          177.1,
+          596.6
+        ]
+      },
+      {
+        "class": "balcony",
+        "conf": 0.988,
+        "box": [
+          474.0,
+          382.6,
+          592.3,
+          409.3
+        ]
+      },
+      {
+        "class": "balcony",
+        "conf": 0.982,
+        "box": [
+          60.0,
+          382.6,
+          180.7,
+          411.3
+        ]
+      },
+      {
+        "class": "window",
+        "conf": 0.982,
+        "box": [
+          476.3,
+          523.3,
+          589.0,
+          596.7
+        ]
+      },
+      {
+        "class": "balcony",
+        "conf": 0.975,
+        "box": [
+          197.7,
+          483.7,
+          317.9,
+          509.2
+        ]
+      },
+      {
+        "class": "louvre_screen",
+        "conf": 0.967,
+        "box": [
+          338.2,
+          405.4,
+          451.3,
+          420.3
+        ]
+      },
+      {
+        "class": "door",
+        "conf": 0.966,
+        "box": [
+          363.2,
+          529.6,
+          425.9,
+          607.7
+        ]
+      },
+      {
+        "class": "louvre_screen",
+        "conf": 0.966,
+        "box": [
+          201.5,
+          509.0,
+          315.6,
+          521.5
+        ]
+      },
+      {
+        "class": "balcony",
+        "conf": 0.959,
+        "box": [
+          59.7,
+          483.8,
+          180.8,
+          509.3
+        ]
+      },
+      {
+        "class": "balcony",
+        "conf": 0.958,
+        "box": [
+          333.5,
+          483.6,
+          457.2,
+          509.2
+        ]
+      },
+      {
+        "class": "louvre_screen",
+        "conf": 0.95,
+        "box": [
+          201.3,
+          204.7,
+          315.2,
+          219.6
+        ]
+      },
+      {
+        "class": "balcony",
+        "conf": 0.939,
+        "box": [
+          198.0,
+          181.5,
+          316.7,
+          205.4
+        ]
+      },
+      {
+        "class": "louvre_screen",
+        "conf": 0.905,
+        "box": [
+          476.0,
+          305.5,
+          587.9,
+          320.6
+        ]
+      },
+      {
+        "class": "louvre_screen",
+        "conf": 0.841,
+        "box": [
+          476.9,
+          408.4,
+          588.5,
+          420.4
+        ]
+      },
+      {
+        "class": "louvre_screen",
+        "conf": 0.824,
+        "box": [
+          63.5,
+          411.0,
+          178.0,
+          420.4
+        ]
+      },
+      {
+        "class": "window",
+        "conf": 0.36,
+        "box": [
+          339.8,
+          137.5,
+          452.6,
+          141.2
+        ]
+      }
+    ],
+    "ve": {
+      "glazed_fraction_of_frame": 0.3615,
+      "envelope_cost_index": 225.3,
+      "counts": {
+        "window": 19,
+        "balcony": 7,
+        "louvre_screen": 6,
+        "door": 1
+      },
+      "basis": "uncalibrated pixel areas \u2014 relative screening signal, not a take-off"
+    }
+  },
+  {
+    "file": "val_07_facade_valid_0103.jpg",
+    "source": "facade_valid_0103.jpg",
+    "detections": [
+      {
+        "class": "curtain_wall",
+        "conf": 0.998,
+        "box": [
+          62.8,
+          75.0,
+          594.2,
+          177.5
+        ]
+      },
+      {
+        "class": "curtain_wall",
+        "conf": 0.998,
+        "box": [
+          62.8,
+          352.9,
+          602.3,
+          454.5
+        ]
+      },
+      {
+        "class": "curtain_wall",
+        "conf": 0.993,
+        "box": [
+          63.1,
+          213.1,
+          592.4,
+          315.2
+        ]
+      },
+      {
+        "class": "balcony",
+        "conf": 0.982,
+        "box": [
+          101.0,
+          159.6,
+          248.6,
+          188.0
+        ]
+      },
+      {
+        "class": "window",
+        "conf": 0.978,
+        "box": [
+          494.9,
+          488.9,
+          598.1,
+          593.7
+        ]
+      },
+      {
+        "class": "door",
+        "conf": 0.504,
+        "box": [
+          370.9,
+          499.9,
+          435.5,
+          607.8
+        ]
+      },
+      {
+        "class": "window",
+        "conf": 0.367,
+        "box": [
+          206.7,
+          478.7,
+          319.2,
+          592.1
+        ]
+      }
+    ],
+    "ve": {
+      "glazed_fraction_of_frame": 0.4563,
+      "envelope_cost_index": 356.0,
+      "counts": {
+        "curtain_wall": 3,
+        "balcony": 1,
+        "window": 2,
+        "door": 1
+      },
+      "basis": "uncalibrated pixel areas \u2014 relative screening signal, not a take-off"
+    }
+  },
+  {
+    "file": "val_08_facade_valid_0104.jpg",
+    "source": "facade_valid_0104.jpg",
+    "detections": [
+      {
+        "class": "window",
+        "conf": 0.999,
+        "box": [
+          510.5,
+          177.0,
+          586.3,
+          251.2
+        ]
+      },
+      {
+        "class": "window",
+        "conf": 0.999,
+        "box": [
+          225.5,
+          389.9,
+          302.5,
+          463.2
+        ]
+      },
+      {
+        "class": "curtain_wall",
+        "conf": 0.998,
+        "box": [
+          29.0,
+          71.2,
+          585.5,
+          143.4
+        ]
+      },
+      {
+        "class": "window",
+        "conf": 0.998,
+        "box": [
+          415.7,
+          176.5,
+          491.5,
+          250.8
+        ]
+      },
+      {
+        "class": "window",
+        "conf": 0.998,
+        "box": [
+          132.0,
+          389.8,
+          207.5,
+          463.9
+        ]
+      },
+      {
+        "class": "window",
+        "conf": 0.998,
+        "box": [
+          509.9,
+          389.5,
+          586.3,
+          464.5
+        ]
+      },
+      {
+        "class": "window",
+        "conf": 0.998,
+        "box": [
+          416.2,
+          389.7,
+          490.9,
+          464.4
+        ]
+      },
+      {
+        "class": "window",
+        "conf": 0.998,
+        "box": [
+          225.1,
+          176.5,
+          302.6,
+          250.7
+        ]
+      },
+      {
+        "class": "window",
+        "conf": 0.997,
+        "box": [
+          320.5,
+          176.9,
+          397.5,
+          250.7
+        ]
+      },
+      {
+        "class": "window",
+        "conf": 0.997,
+        "box": [
+          511.0,
+          496.5,
+          585.9,
+          571.4
+        ]
+      },
+      {
+        "class": "window",
+        "conf": 0.997,
+        "box": [
+          131.6,
+          176.5,
+          207.5,
+          250.7
+        ]
+      },
+      {
+        "class": "window",
+        "conf": 0.996,
+        "box": [
+          131.9,
+          495.7,
+          207.4,
+          570.8
+        ]
+      },
+      {
+        "class": "window",
+        "conf": 0.995,
+        "box": [
+          37.0,
+          389.7,
+          112.2,
+          463.9
+        ]
+      },
+      {
+        "class": "window",
+        "conf": 0.995,
+        "box": [
+          415.4,
+          495.5,
+          491.1,
+          570.9
+        ]
+      },
+      {
+        "class": "curtain_wall",
+        "conf": 0.995,
+        "box": [
+          28.1,
+          284.8,
+          588.2,
+          357.2
+        ]
+      },
+      {
+        "class": "window",
+        "conf": 0.994,
+        "box": [
+          37.2,
+          495.6,
+          112.1,
+          571.0
+        ]
+      },
+      {
+        "class": "balcony",
+        "conf": 0.993,
+        "box": [
+          504.7,
+          239.1,
+          592.7,
+          265.5
+        ]
+      },
+      {
+        "class": "window",
+        "conf": 0.991,
+        "box": [
+          320.8,
+          389.3,
+          397.3,
+          449.5
+        ]
+      },
+      {
+        "class": "window",
+        "conf": 0.991,
+        "box": [
+          37.2,
+          176.6,
+          112.0,
+          250.9
+        ]
+      },
+      {
+        "class": "window",
+        "conf": 0.989,
+        "box": [
+          225.4,
+          496.9,
+          297.5,
+          570.7
+        ]
+      },
+      {
+        "class": "balcony",
+        "conf": 0.976,
+        "box": [
+          506.3,
+          452.2,
+          592.1,
+          478.3
+        ]
+      },
+      {
+        "class": "louvre_screen",
+        "conf": 0.866,
+        "box": [
+          415.3,
+          164.4,
+          491.7,
+          175.0
+        ]
+      },
+      {
+        "class": "louvre_screen",
+        "conf": 0.737,
+        "box": [
+          125.9,
+          32.9,
+          246.2,
+          52.8
+        ]
+      }
+    ],
+    "ve": {
+      "glazed_fraction_of_frame": 0.428,
+      "envelope_cost_index": 281.1,
+      "counts": {
+        "window": 17,
+        "curtain_wall": 2,
+        "balcony": 2,
+        "louvre_screen": 2
+      },
+      "basis": "uncalibrated pixel areas \u2014 relative screening signal, not a take-off"
+    }
+  },
+  {
+    "file": "val_09_facade_valid_0105.jpg",
+    "source": "facade_valid_0105.jpg",
+    "detections": [
+      {
+        "class": "window",
+        "conf": 0.997,
+        "box": [
+          501.8,
+          484.8,
+          583.9,
+          568.5
+        ]
+      },
+      {
+        "class": "window",
+        "conf": 0.997,
+        "box": [
+          75.3,
+          485.0,
+          159.1,
+          568.4
+        ]
+      },
+      {
+        "class": "curtain_wall",
+        "conf": 0.996,
+        "box": [
+          70.1,
+          232.2,
+          582.9,
+          310.9
+        ]
+      },
+      {
+        "class": "curtain_wall",
+        "conf": 0.995,
+        "box": [
+          67.4,
+          360.3,
+          582.3,
+          438.5
+        ]
+      },
+      {
+        "class": "curtain_wall",
+        "conf": 0.995,
+        "box": [
+          70.8,
+          105.7,
+          582.5,
+          184.1
+        ]
+      },
+      {
+        "class": "window",
+        "conf": 0.989,
+        "box": [
+          182.4,
+          484.7,
+          264.1,
+          568.6
+        ]
+      },
+      {
+        "class": "balcony",
+        "conf": 0.988,
+        "box": [
+          81.3,
+          422.0,
+          224.9,
+          449.2
+        ]
+      },
+      {
+        "class": "door",
+        "conf": 0.977,
+        "box": [
+          304.5,
+          488.1,
+          354.9,
+          588.1
+        ]
+      }
+    ],
+    "ve": {
+      "glazed_fraction_of_frame": 0.3453,
+      "envelope_cost_index": 268.0,
+      "counts": {
+        "window": 3,
+        "curtain_wall": 3,
+        "balcony": 1,
+        "door": 1
+      },
+      "basis": "uncalibrated pixel areas \u2014 relative screening signal, not a take-off"
+    }
+  },
+  {
+    "file": "val_10_facade_valid_0106.jpg",
+    "source": "facade_valid_0106.jpg",
+    "detections": [
+      {
+        "class": "window",
+        "conf": 0.999,
+        "box": [
+          383.2,
+          144.8,
+          469.0,
+          210.8
+        ]
+      },
+      {
+        "class": "window",
+        "conf": 0.999,
+        "box": [
+          494.5,
+          336.5,
+          580.6,
+          402.8
+        ]
+      },
+      {
+        "class": "window",
+        "conf": 0.999,
+        "box": [
+          494.6,
+          240.8,
+          580.4,
+          306.5
+        ]
+      },
+      {
+        "class": "window",
+        "conf": 0.999,
+        "box": [
+          494.9,
+          48.8,
+          580.6,
+          114.2
+        ]
+      },
+      {
+        "class": "window",
+        "conf": 0.999,
+        "box": [
+          160.5,
+          48.8,
+          246.1,
+          114.2
+        ]
+      },
+      {
+        "class": "window",
+        "conf": 0.999,
+        "box": [
+          383.5,
+          240.4,
+          469.2,
+          306.5
+        ]
+      },
+      {
+        "class": "window",
+        "conf": 0.999,
+        "box": [
+          271.3,
+          240.8,
+          358.0,
+          306.5
+        ]
+      },
+      {
+        "class": "window",
+        "conf": 0.999,
+        "box": [
+          494.4,
+          144.2,
+          580.5,
+          210.5
+        ]
+      },
+      {
+        "class": "window",
+        "conf": 0.998,
+        "box": [
+          160.3,
+          432.3,
+          246.2,
+          498.3
+        ]
+      },
+      {
+        "class": "window",
+        "conf": 0.998,
+        "box": [
+          271.3,
+          144.4,
+          358.1,
+          210.5
+        ]
+      },
+      {
+        "class": "window",
+        "conf": 0.998,
+        "box": [
+          383.2,
+          336.5,
+          469.4,
+          402.7
+        ]
+      },
+      {
+        "class": "window",
+        "conf": 0.998,
+        "box": [
+          160.2,
+          336.0,
+          246.3,
+          402.3
+        ]
+      },
+      {
+        "class": "window",
+        "conf": 0.998,
+        "box": [
+          271.2,
+          336.2,
+          358.3,
+          402.6
+        ]
+      },
+      {
+        "class": "window",
+        "conf": 0.998,
+        "box": [
+          494.7,
+          528.7,
+          580.9,
+          595.0
+        ]
+      },
+      {
+        "class": "window",
+        "conf": 0.998,
+        "box": [
+          160.4,
+          144.0,
+          246.3,
+          210.3
+        ]
+      },
+      {
+        "class": "window",
+        "conf": 0.998,
+        "box": [
+          160.4,
+          239.9,
+          246.4,
+          305.1
+        ]
+      },
+      {
+        "class": "window",
+        "conf": 0.997,
+        "box": [
+          383.9,
+          528.2,
+          469.2,
+          594.5
+        ]
+      },
+      {
+        "class": "window",
+        "conf": 0.997,
+        "box": [
+          49.1,
+          528.4,
+          135.3,
+          594.8
+        ]
+      },
+      {
+        "class": "window",
+        "conf": 0.997,
+        "box": [
+          49.1,
+          432.4,
+          135.2,
+          498.4
+        ]
+      },
+      {
+        "class": "window",
+        "conf": 0.997,
+        "box": [
+          383.4,
+          432.3,
+          469.2,
+          498.3
+        ]
+      },
+      {
+        "class": "window",
+        "conf": 0.996,
+        "box": [
+          49.0,
+          336.0,
+          135.3,
+          402.5
+        ]
+      },
+      {
+        "class": "window",
+        "conf": 0.996,
+        "box": [
+          49.2,
+          144.4,
+          135.1,
+          210.5
+        ]
+      },
+      {
+        "class": "balcony",
+        "conf": 0.99,
+        "box": [
+          487.9,
+          294.7,
+          585.6,
+          320.2
+        ]
+      },
+      {
+        "class": "balcony",
+        "conf": 0.99,
+        "box": [
+          378.1,
+          198.7,
+          475.2,
+          224.2
+        ]
+      },
+      {
+        "class": "balcony",
+        "conf": 0.989,
+        "box": [
+          266.4,
+          294.7,
+          364.2,
+          320.1
+        ]
+      },
+      {
+        "class": "balcony",
+        "conf": 0.989,
+        "box": [
+          155.3,
+          102.8,
+          252.0,
+          128.0
+        ]
+      },
+      {
+        "class": "balcony",
+        "conf": 0.988,
+        "box": [
+          155.1,
+          390.7,
+          252.0,
+          416.1
+        ]
+      },
+      {
+        "class": "door",
+        "conf": 0.988,
+        "box": [
+          289.1,
+          533.1,
+          340.8,
+          608.0
+        ]
+      },
+      {
+        "class": "balcony",
+        "conf": 0.987,
+        "box": [
+          488.0,
+          390.7,
+          585.7,
+          416.0
+        ]
+      },
+      {
+        "class": "balcony",
+        "conf": 0.971,
+        "box": [
+          156.0,
+          294.6,
+          251.2,
+          321.1
+        ]
+      },
+      {
+        "class": "balcony",
+        "conf": 0.944,
+        "box": [
+          490.5,
+          102.6,
+          585.5,
+          126.2
+        ]
+      },
+      {
+        "class": "window",
+        "conf": 0.853,
+        "box": [
+          160.0,
+          528.7,
+          202.4,
+          595.1
+        ]
+      },
+      {
+        "class": "louvre_screen",
+        "conf": 0.826,
+        "box": [
+          161.7,
+          318.8,
+          246.4,
+          334.1
+        ]
+      },
+      {
+        "class": "louvre_screen",
+        "conf": 0.807,
+        "box": [
+          385.1,
+          510.9,
+          469.1,
+          526.0
+        ]
+      },
+      {
+        "class": "louvre_screen",
+        "conf": 0.774,
+        "box": [
+          162.2,
+          224.7,
+          247.1,
+          237.6
+        ]
+      },
+      {
+        "class": "louvre_screen",
+        "conf": 0.693,
+        "box": [
+          492.0,
+          124.2,
+          580.9,
+          141.7
+        ]
+      }
+    ],
+    "ve": {
+      "glazed_fraction_of_frame": 0.3122,
+      "envelope_cost_index": 192.4,
+      "counts": {
+        "window": 23,
+        "balcony": 8,
+        "door": 1,
+        "louvre_screen": 4
+      },
+      "basis": "uncalibrated pixel areas \u2014 relative screening signal, not a take-off"
+    }
+  }
+]

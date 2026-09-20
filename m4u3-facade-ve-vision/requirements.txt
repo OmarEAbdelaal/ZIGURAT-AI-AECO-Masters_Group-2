@@ -1,0 +1,13 @@
+# Pinned to the versions the documented verification run actually used.
+# Session 1: "We pin the version so that every one of us is debugging the
+# same thing." Relax a pin only when you re-run and re-record the metrics.
+
+ultralytics==8.4.157
+torch>=2.4,<3.0
+pillow>=10.0
+pyyaml>=6.0
+numpy>=1.26
+matplotlib>=3.8
+
+# Only needed when DATASET_SOURCE is "roboflow" or "universe".
+roboflow>=1.1.30

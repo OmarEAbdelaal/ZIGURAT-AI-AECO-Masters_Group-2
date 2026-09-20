@@ -1,0 +1,56 @@
+Façade Element Detection for Continuous Value Engineering
+Copyright 2026 Omar Elsayed
+
+This product includes software developed for the ZIGURAT Global Institute of
+Technology AI-AECO Master's programme (MAICEN 0526), Module 4 Unit 3.
+
+Licensed under the Apache License, Version 2.0. See LICENSE.
+
+--------------------------------------------------------------------------------
+THIRD-PARTY NOTICES
+--------------------------------------------------------------------------------
+
+Ultralytics YOLOv8  —  https://github.com/ultralytics/ultralytics
+    Licensed under AGPL-3.0.
+
+    IMPORTANT AND FREQUENTLY OVERLOOKED: model weights fine-tuned from
+    Ultralytics pretrained checkpoints (yolov8n.pt and the rest) are derivative
+    works of AGPL-3.0 software. The Apache-2.0 licence on THIS repository covers
+    the code, documentation and datasets authored here. It does not and cannot
+    relicense the upstream weights.
+
+    In practice that means:
+      - Academic, research and personal use: fine under AGPL-3.0.
+      - Deploying these weights in a networked service: AGPL-3.0 section 13
+        requires you to offer the complete corresponding source of that service
+        to its users.
+      - Shipping them inside a closed commercial product: you need an
+        Ultralytics Enterprise Licence.
+
+    Anyone taking this project toward a commercial AECO product should resolve
+    this before writing integration code, not after.
+
+PyTorch  —  https://github.com/pytorch/pytorch                 BSD-3-Clause
+Pillow   —  https://github.com/python-pillow/Pillow            MIT-CMU
+NumPy    —  https://github.com/numpy/numpy                     BSD-3-Clause
+PyYAML   —  https://github.com/yaml/pyyaml                     MIT
+Roboflow Python SDK  —  https://github.com/roboflow/roboflow-python   Apache-2.0
+
+--------------------------------------------------------------------------------
+DATASET RIGHTS
+--------------------------------------------------------------------------------
+
+The procedural verification dataset produced by src/synthetic_facades.py is
+original to this project and is released under Apache-2.0 with the code.
+
+Any third-party imagery used for real training is recorded, with its individual
+licence, in data/README.md. No proprietary, client-owned or employer-owned
+project imagery is included in this repository.
+
+--------------------------------------------------------------------------------
+TRADEMARKS
+--------------------------------------------------------------------------------
+
+"ZIGURAT" and the ZIGURAT mark belong to Zigurat Global Institute of Technology
+and are used here for academic identification only. Nothing in the Apache-2.0
+licence grants any right in those marks.

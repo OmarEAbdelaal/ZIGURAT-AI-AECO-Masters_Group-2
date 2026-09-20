@@ -1,0 +1,348 @@
+{
+  "weights": "/home/user/ZIGURAT-AI-AECO-Masters_Group-2/m4u3-facade-ve-vision/results/weights/best.pt",
+  "conf_threshold": 0.35,
+  "match_iou": 0.5,
+  "localization_error_iou": 0.75,
+  "images_evaluated": 24,
+  "tally": {
+    "true_positive": 459,
+    "false_positive": 9,
+    "false_negative": 23,
+    "localization_error": 6,
+    "class_confusion": 3
+  },
+  "total_errors": 41,
+  "false_positives_by_class": {
+    "window": 7,
+    "door": 2
+  },
+  "false_negatives_by_class": {
+    "balcony": 2,
+    "window": 16,
+    "door": 4,
+    "louvre_screen": 1
+  },
+  "worst_false_positives": [
+    {
+      "image": "facade_valid_0118.jpg",
+      "pred_class": "door",
+      "conf": 0.98,
+      "iou": 0.326,
+      "box": [
+        446.57855224609375,
+        514.2526245117188,
+        497.11383056640625,
+        577.7788696289062
+      ]
+    },
+    {
+      "image": "facade_valid_0110.jpg",
+      "pred_class": "window",
+      "conf": 0.916,
+      "iou": 0.396,
+      "box": [
+        441.2079772949219,
+        459.5920104980469,
+        507.4655456542969,
+        498.8896789550781
+      ]
+    },
+    {
+      "image": "facade_valid_0106.jpg",
+      "pred_class": "window",
+      "conf": 0.853,
+      "iou": 0.478,
+      "box": [
+        159.99838256835938,
+        528.6827392578125,
+        202.41470336914062,
+        595.0865478515625
+      ]
+    },
+    {
+      "image": "facade_valid_0117.jpg",
+      "pred_class": "window",
+      "conf": 0.754,
+      "iou": 0.0,
+      "box": [
+        286.73846435546875,
+        536.0849609375,
+        368.45330810546875,
+        589.5869140625
+      ]
+    },
+    {
+      "image": "facade_valid_0110.jpg",
+      "pred_class": "window",
+      "conf": 0.573,
+      "iou": 0.443,
+      "box": [
+        360.4336853027344,
+        460.8310546875,
+        507.6125183105469,
+        541.198486328125
+      ]
+    },
+    {
+      "image": "facade_valid_0098.jpg",
+      "pred_class": "window",
+      "conf": 0.531,
+      "iou": 0.0,
+      "box": [
+        295.35650634765625,
+        519.476318359375,
+        376.4400634765625,
+        602.822509765625
+      ]
+    }
+  ],
+  "worst_false_negatives": [
+    {
+      "image": "facade_valid_0119.jpg",
+      "true_class": "window",
+      "box": [
+        262.72191999999995,
+        136.04000000000002,
+        347.27744,
+        139.63744
+      ],
+      "area_px": 304.2,
+      "rel_area": 0.00074
+    },
+    {
+      "image": "facade_valid_0100.jpg",
+      "true_class": "window",
+      "box": [
+        161.78688,
+        108.41471999999999,
+        228.71296,
+        113.31199999999998
+      ],
+      "area_px": 327.8,
+      "rel_area": 0.0008
+    },
+    {
+      "image": "facade_valid_0111.jpg",
+      "true_class": "window",
+      "box": [
+        254.35648,
+        92.44991999999999,
+        400.64384000000007,
+        95.89952
+      ],
+      "area_px": 504.6,
+      "rel_area": 0.00123
+    },
+    {
+      "image": "facade_valid_0107.jpg",
+      "true_class": "window",
+      "box": [
+        78.09248000000001,
+        71.09984,
+        171.90688,
+        76.83615999999999
+      ],
+      "area_px": 538.1,
+      "rel_area": 0.00131
+    },
+    {
+      "image": "facade_valid_0106.jpg",
+      "true_class": "window",
+      "box": [
+        49.50464000000001,
+        61.849920000000004,
+        135.69472000000002,
+        68.50399999999999
+      ],
+      "area_px": 573.5,
+      "rel_area": 0.0014
+    },
+    {
+      "image": "facade_valid_0112.jpg",
+      "true_class": "window",
+      "box": [
+        56.98432,
+        62.257279999999994,
+        204.34944,
+        66.3328
+      ],
+      "area_px": 600.6,
+      "rel_area": 0.00147
+    }
+  ],
+  "worst_class_confusions": [
+    {
+      "image": "facade_valid_0111.jpg",
+      "pred_class": "window",
+      "conf": 0.925,
+      "iou": 0.976,
+      "box": [
+        285.9053955078125,
+        473.0590515136719,
+        368.931396484375,
+        576.28076171875
+      ],
+      "true_class": "door",
+      "gt_box": [
+        285.56352000000004,
+        473.7996800000001,
+        369.4368,
+        576.99968
+      ]
+    },
+    {
+      "image": "facade_valid_0108.jpg",
+      "pred_class": "louvre_screen",
+      "conf": 0.612,
+      "iou": 0.551,
+      "box": [
+        244.22943115234375,
+        97.59573364257812,
+        388.54058837890625,
+        105.25856018066406
+      ],
+      "true_class": "window",
+      "gt_box": [
+        242.93536,
+        100.22528,
+        385.06464,
+        106.48576
+      ]
+    },
+    {
+      "image": "facade_valid_0107.jpg",
+      "pred_class": "window",
+      "conf": 0.527,
+      "iou": 0.97,
+      "box": [
+        358.01812744140625,
+        513.7811889648438,
+        418.66461181640625,
+        583.3970336914062
+      ],
+      "true_class": "door",
+      "gt_box": [
+        358.63968,
+        513.73312,
+        419.35968,
+        584.0
+      ]
+    }
+  ],
+  "worst_localization_errors": [
+    {
+      "image": "facade_valid_0109.jpg",
+      "pred_class": "window",
+      "conf": 0.74,
+      "iou": 0.63,
+      "box": [
+        61.34031677246094,
+        517.382080078125,
+        125.12184143066406,
+        586.860107421875
+      ],
+      "true_class": "window",
+      "gt_box": [
+        61.862080000000006,
+        517.76576,
+        159.38848000000002,
+        588.2336
+      ]
+    },
+    {
+      "image": "facade_valid_0099.jpg",
+      "pred_class": "window",
+      "conf": 0.429,
+      "iou": 0.686,
+      "box": [
+        384.14056396484375,
+        81.78424072265625,
+        473.11456298828125,
+        84.91328430175781
+      ],
+      "true_class": "window",
+      "gt_box": [
+        384.76832,
+        82.32031999999998,
+        472.43104000000005,
+        85.51712
+      ]
+    },
+    {
+      "image": "facade_valid_0100.jpg",
+      "pred_class": "balcony",
+      "conf": 0.6,
+      "iou": 0.732,
+      "box": [
+        434.1781005859375,
+        139.34771728515625,
+        508.6632080078125,
+        160.27215576171875
+      ],
+      "true_class": "balcony",
+      "gt_box": [
+        431.28671999999995,
+        139.9632,
+        508.2128,
+        165.96319999999997
+      ]
+    },
+    {
+      "image": "facade_valid_0110.jpg",
+      "pred_class": "window",
+      "conf": 0.499,
+      "iou": 0.736,
+      "box": [
+        529.3867797851562,
+        90.54487609863281,
+        598.5191040039062,
+        94.71540832519531
+      ],
+      "true_class": "window",
+      "gt_box": [
+        528.2457599999999,
+        89.99967999999998,
+        598.75456,
+        94.07712000000001
+      ]
+    },
+    {
+      "image": "facade_valid_0098.jpg",
+      "pred_class": "window",
+      "conf": 0.901,
+      "iou": 0.739,
+      "box": [
+        87.4281005859375,
+        512.65771484375,
+        193.35369873046875,
+        589.442138671875
+      ],
+      "true_class": "window",
+      "gt_box": [
+        87.90495999999999,
+        512.45344,
+        229.09472,
+        589.74688
+      ]
+    },
+    {
+      "image": "facade_valid_0108.jpg",
+      "pred_class": "louvre_screen",
+      "conf": 0.743,
+      "iou": 0.747,
+      "box": [
+        244.34185791015625,
+        87.35652160644531,
+        388.1673583984375,
+        101.47845458984375
+      ],
+      "true_class": "louvre_screen",
+      "gt_box": [
+        242.93536,
+        87.344,
+        385.06464,
+        98.22528
+      ]
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+# Class contract, YOLO format. AUTHORITATIVE CLASS ORDER.
+#
+# Class ids are positional: every label .txt file encodes these five classes by
+# index. Reordering this list silently relabels the entire dataset and the
+# metrics will still look plausible. Append only.
+#
+# src/dataset.py refuses to train if a downloaded dataset's class order
+# disagrees with src/config.py, which mirrors this list.
+#
+# `path` is filled in at run time by src/dataset.py so the same file works in
+# Colab, locally and in CI. Never hard-code an absolute path here.
+
+path: ""
+train: train/images
+val: valid/images
+
+nc: 5
+names:
+  - window          # 0  discrete glazed opening within an opaque wall
+  - curtain_wall    # 1  continuous glazed zone, no opaque interruption
+  - door            # 2  ground-level pedestrian entrance / egress
+  - balcony         # 3  projecting or recessed occupiable slab with balustrade
+  - louvre_screen   # 4  fixed slatted solar-shading or plant-screening element
+
+# Full definitions, inclusion/exclusion rules and boundary cases:
+#   docs/class_definitions.md

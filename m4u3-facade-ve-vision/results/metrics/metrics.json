@@ -1,0 +1,115 @@
+{
+  "run_utc": "2026-09-20T19:57:07+00:00",
+  "dataset_source": "synthetic",
+  "is_verification_run": true,
+  "data_yaml": "/home/user/ZIGURAT-AI-AECO-Masters_Group-2/m4u3-facade-ve-vision/data/dataset/synthetic/data.yaml",
+  "dataset_health": {
+    "yaml": "/home/user/ZIGURAT-AI-AECO-Masters_Group-2/m4u3-facade-ve-vision/data/dataset/synthetic/data.yaml",
+    "splits": {
+      "train": {
+        "images": 96,
+        "instances": 2087,
+        "unlabelled_images": 0
+      },
+      "val": {
+        "images": 24,
+        "instances": 491,
+        "unlabelled_images": 0
+      }
+    },
+    "per_class": {
+      "train": {
+        "window": 1341,
+        "curtain_wall": 153,
+        "door": 96,
+        "balcony": 278,
+        "louvre_screen": 219
+      },
+      "val": {
+        "window": 316,
+        "curtain_wall": 37,
+        "door": 24,
+        "balcony": 66,
+        "louvre_screen": 48
+      },
+      "TOTAL": {
+        "window": 1657,
+        "curtain_wall": 190,
+        "door": 120,
+        "balcony": 344,
+        "louvre_screen": 267
+      }
+    },
+    "split_ratio": {
+      "train": "80%",
+      "val": "20%"
+    },
+    "imbalance_ratio": 13.8
+  },
+  "device": "cpu",
+  "gpu": "CPU only",
+  "train_seconds": 499.0,
+  "ultralytics": "8.4.157",
+  "torch": "2.14.0+cu130",
+  "config": {
+    "model": "yolov8n.pt",
+    "epochs": 30,
+    "batch": 16,
+    "imgsz": 640,
+    "seed": 42,
+    "patience": 20,
+    "optimizer": "auto",
+    "cos_lr": true,
+    "deterministic": true,
+    "name": "facade_ve_v1",
+    "project": "runs/detect"
+  },
+  "overall": {
+    "precision": 0.9754,
+    "recall": 0.9459,
+    "mAP50": 0.9475,
+    "mAP50_95": 0.8794
+  },
+  "per_class": [
+    {
+      "class": "window",
+      "instances": 316,
+      "precision": 0.9804,
+      "recall": 0.9511,
+      "mAP50": 0.9852,
+      "mAP50_95": 0.9511
+    },
+    {
+      "class": "curtain_wall",
+      "instances": 37,
+      "precision": 0.9798,
+      "recall": 1.0,
+      "mAP50": 0.995,
+      "mAP50_95": 0.9756
+    },
+    {
+      "class": "door",
+      "instances": 24,
+      "precision": 0.9522,
+      "recall": 0.8295,
+      "mAP50": 0.8213,
+      "mAP50_95": 0.8091
+    },
+    {
+      "class": "balcony",
+      "instances": 66,
+      "precision": 0.9936,
+      "recall": 0.9697,
+      "mAP50": 0.965,
+      "mAP50_95": 0.8968
+    },
+    {
+      "class": "louvre_screen",
+      "instances": 48,
+      "precision": 0.9709,
+      "recall": 0.9792,
+      "mAP50": 0.9708,
+      "mAP50_95": 0.7644
+    }
+  ]
+}

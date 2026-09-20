@@ -1,0 +1,26 @@
+# Datasets are never committed. They are fetched at run time from the source
+# declared in src/config.py, so the repository stays small and the licence
+# position on third-party imagery stays clean.
+data/dataset/
+data/new_images/*
+!data/new_images/.gitkeep
+!data/new_images/README.md
+
+# Ultralytics training output. The artefacts worth keeping are copied into
+# results/ by src/train.py; the raw run directory is disposable.
+runs/
+*.pt
+!results/weights/best.pt
+
+# Secrets. The Roboflow key is read from the environment or a Colab secret and
+# must never reach a commit.
+.env
+*.key
+secrets.*
+
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.DS_Store
+.venv/
+venv/

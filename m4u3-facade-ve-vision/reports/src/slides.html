@@ -1,0 +1,306 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
+<title>M4U3 Façade VE Vision — Slides</title>
+<style>
+:root{
+  --blue:#1C60F3; --mint:#41CF97; --mint-text:#1E7A57; --violet:#7B4FE0;
+  --orange:#DD6B20; --teal:#17A2B8; --charcoal:#1B1F23; --slate:#4A5568;
+  --silver:#E2E8F0; --offwhite:#F7F9FA; --amber-text:#8A5A00;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+@page{size:330mm 186mm;margin:0}
+body{font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;color:var(--charcoal);
+  -webkit-print-color-adjust:exact;print-color-adjust:exact}
+.slide{width:330mm;height:186mm;padding:15mm 18mm;position:relative;
+  page-break-after:always;overflow:hidden;background:#fff;display:flex;flex-direction:column}
+.slide:last-child{page-break-after:auto}
+.slide::before{content:"";position:absolute;top:0;left:0;right:0;height:5mm;
+  background:linear-gradient(90deg,var(--blue) 0%,var(--blue) 62%,var(--mint) 62%,var(--mint) 100%)}
+.num{position:absolute;bottom:8mm;right:18mm;font-size:9.5pt;color:var(--slate);font-variant-numeric:tabular-nums}
+.foot{position:absolute;bottom:8mm;left:18mm;font-size:9pt;color:var(--slate);letter-spacing:.02em}
+.eyebrow{font-size:9.5pt;letter-spacing:.16em;text-transform:uppercase;color:var(--blue);font-weight:700;margin-bottom:4mm}
+h1{font-size:34pt;line-height:1.1;letter-spacing:-.018em;font-weight:700}
+h2{font-size:25pt;line-height:1.15;letter-spacing:-.012em;font-weight:700;margin-bottom:7mm}
+p,li{font-size:12.5pt;line-height:1.55;color:var(--slate)}
+strong{color:var(--charcoal);font-weight:600}
+.lead{font-size:14.5pt;line-height:1.45;color:var(--slate)}
+.cols{display:flex;gap:11mm;flex:1;min-height:0}
+.col{flex:1;min-width:0}
+.card{background:var(--offwhite);border:1px solid var(--silver);border-radius:3mm;padding:6.5mm}
+.card.accent{border-left:1.6mm solid var(--blue)}
+.card.warn{border-left:1.6mm solid var(--orange);background:#FFF8F2}
+.card.good{border-left:1.6mm solid var(--mint);background:#F2FCF8}
+.kpi{display:flex;gap:5mm;margin:5mm 0}
+.kpi div{flex:1;background:var(--offwhite);border:1px solid var(--silver);
+  border-radius:3mm;padding:5mm 4mm;text-align:center}
+.kpi .v{font-size:25pt;font-weight:700;color:var(--blue);line-height:1;font-variant-numeric:tabular-nums}
+.kpi .v.mint{color:var(--mint-text)} .kpi .v.orange{color:var(--orange)}
+.kpi .l{font-size:8.5pt;color:var(--slate);margin-top:2.5mm;letter-spacing:.06em;text-transform:uppercase}
+table{width:100%;border-collapse:collapse;font-size:11pt}
+th{text-align:left;font-size:8.5pt;letter-spacing:.07em;text-transform:uppercase;
+  color:var(--slate);border-bottom:1.5px solid var(--charcoal);padding:2.5mm 2mm;font-weight:600}
+td{padding:2.9mm 2mm;border-bottom:1px solid var(--silver);color:var(--slate)}
+td.n{text-align:right;font-variant-numeric:tabular-nums}
+tr.hi td{background:#FFF8F2;color:var(--charcoal);font-weight:600}
+code{font-family:'SF Mono',Menlo,Consolas,monospace;font-size:.9em;
+  background:var(--silver);padding:.4mm 1.3mm;border-radius:1mm;color:var(--charcoal)}
+ul{list-style:none} li{margin-bottom:4.2mm;padding-left:6mm;position:relative}
+li::before{content:"";position:absolute;left:0;top:2.2mm;width:2.4mm;height:2.4mm;
+  border-radius:50%;background:var(--blue)}
+li.mint::before{background:var(--mint)} li.orange::before{background:var(--orange)}
+.banner{background:#FFF8F2;border:1px solid #F0C9A8;border-left:1.6mm solid var(--orange);
+  border-radius:2mm;padding:4mm 5mm;font-size:10pt;color:var(--amber-text);margin-top:4mm}
+img{max-width:100%;border-radius:2mm;border:1px solid var(--silver);display:block;
+  object-fit:contain}
+.fit-sm{max-height:52mm} .fit-md{max-height:68mm} .fit-lg{max-height:86mm}
+.chips{display:flex;gap:2.5mm;flex-wrap:wrap;margin-top:4mm}
+.chip{font-size:9pt;padding:1.6mm 3.5mm;border-radius:99px;background:var(--offwhite);
+  border:1px solid var(--silver);color:var(--slate)}
+.chip b{color:var(--charcoal)}
+.tiny{font-size:9.8pt;color:var(--slate);line-height:1.5}
+.rule{height:1px;background:var(--silver);margin:5mm 0}
+.title-wrap{flex:1;display:flex;flex-direction:column;justify-content:center;max-width:215mm}
+.dense .kpi{margin:3.5mm 0}
+.dense .kpi div{padding:3.5mm 3mm}
+.dense .kpi .v{font-size:22pt}
+.dense td{padding:2.2mm 2mm}
+.dense table{font-size:10.5pt}
+.dense .banner{margin-top:3mm;padding:3.2mm 4.5mm;font-size:9.6pt}
+.dense .card{padding:5mm}
+.dense h2{margin-bottom:4mm}
+.swatch{display:inline-block;width:3mm;height:3mm;border-radius:.7mm;margin-right:2mm;vertical-align:baseline}
+</style></head><body>
+
+<!-- 1 TITLE -->
+<section class="slide">
+  <div class="title-wrap">
+    <div class="eyebrow">ZIGURAT AI-AECO Master · MAICEN 0526 · Module 4 Unit 3</div>
+    <h1>Façade Element Detection for<br>Continuous Value Engineering</h1>
+    <p class="lead" style="margin-top:7mm;max-width:190mm">
+      A YOLOv8 detector that reads building-envelope elements from photographs and rendered
+      elevations — so a Value Engineering assistant can estimate envelope composition for a
+      building it has <strong>no BIM model of</strong>.
+    </p>
+    <div class="chips">
+      <span class="chip"><b>Omar Elsayed</b> · Group 02</span>
+      <span class="chip">5 classes</span>
+      <span class="chip">YOLOv8n · 30 epochs · 640 px</span>
+      <span class="chip">80 / 20 split</span>
+      <span class="chip">Apache-2.0</span>
+    </div>
+  </div>
+  <div class="foot">Perception component of the FMP: AI-Powered BIM Decision Support System for Continuous Value Engineering</div>
+  <div class="num">1 / 6</div>
+</section>
+
+<!-- 2 PROBLEM -->
+<section class="slide">
+  <div class="eyebrow">The problem</div>
+  <h2>The BIM model cannot answer the question at the moment it is asked</h2>
+  <div class="cols">
+    <div class="col">
+      <p style="margin-bottom:5mm">Continuous Value Engineering needs to know what is on the
+      façade. Three situations put that truth <strong>outside</strong> the model:</p>
+      <ul>
+        <li><strong>Concept &amp; early SD</strong> — no modelled façade exists yet, only renders and sketch elevations.</li>
+        <li class="mint"><strong>Benchmarking</strong> — there is no BIM model of a precedent or a competitor's scheme.</li>
+        <li class="orange"><strong>As-built divergence</strong> — the façade was value-engineered on site. The model says one thing; the photograph says another.</li>
+      </ul>
+      <div class="card accent" style="margin-top:5mm">
+        <p style="font-size:11pt"><strong>Why the envelope.</strong> Typically <strong>15–25 % of
+        construction cost</strong> and consistently the first package opened in a VE exercise.
+        An early, cheap, repeatable read on envelope composition is worth more than a more
+        accurate read on almost anything else.</p>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card" style="margin-bottom:5mm">
+        <div class="eyebrow" style="margin-bottom:3mm">Success criteria</div>
+        <p style="font-size:11pt">Recover <strong>Window-to-Wall Ratio to within ±10 %</strong> of a
+        human's reading of the same image, on frontal-to-30°-oblique daylight elevations of
+        3–10 storey buildings, in under <strong>2 seconds</strong> per image.</p>
+      </div>
+      <div class="card warn">
+        <div class="eyebrow" style="color:var(--orange);margin-bottom:3mm">The anti-use case</div>
+        <p style="font-size:10.5pt;color:var(--amber-text)">Not a quantity take-off. Not a compliance
+        check. Not a BIM-vs-reality verifier. Not a people-watching system — there is
+        <strong>no person class, by design</strong>.</p>
+      </div>
+      <p class="tiny" style="margin-top:4mm"><strong>Baseline check (Session 1).</strong> Stock COCO
+      YOLOv8 on a façade detects no windows, no curtain wall and no balconies. It is not
+      inaccurate — it is answering a different question. COCO has <code>toothbrush</code>;
+      it has no <code>curtain_wall</code>.</p>
+    </div>
+  </div>
+  <div class="num">2 / 6</div>
+</section>
+
+<!-- 3 CLASSES + DATA -->
+<section class="slide">
+  <div class="eyebrow">The class contract &amp; the data</div>
+  <h2>Five classes, three standing rules, one load-bearing order</h2>
+  <div class="cols">
+    <div class="col" style="flex:1.25">
+      <table>
+        <tr><th>id</th><th>class</th><th>the discriminating test</th></tr>
+        <tr><td class="n">0</td><td><span class="swatch" style="background:#1C60F3"></span><code>window</code></td><td>bounded by opaque material on all four sides</td></tr>
+        <tr><td class="n">1</td><td><span class="swatch" style="background:#41CF97"></span><code>curtain_wall</code></td><td><em>can I trace unbroken glass across it?</em></td></tr>
+        <tr><td class="n">2</td><td><span class="swatch" style="background:#7B4FE0"></span><code>door</code></td><td>at grade and enterable</td></tr>
+        <tr><td class="n">3</td><td><span class="swatch" style="background:#DD6B20"></span><code>balcony</code></td><td>occupiable depth, not a guard rail</td></tr>
+        <tr><td class="n">4</td><td><span class="swatch" style="background:#17A2B8"></span><code>louvre_screen</code></td><td>permanent, not scaffold netting</td></tr>
+      </table>
+      <div class="card" style="margin-top:5mm">
+        <div class="eyebrow" style="margin-bottom:3mm">The three standing rules</div>
+        <p class="tiny"><strong>1.</strong> No reflections — a mirrored window double-counts the envelope.<br>
+        <strong>2.</strong> No neighbouring buildings — one subject per image.<br>
+        <strong>3.</strong> Partial and occluded elements <strong>are</strong> labelled, visible extent only, 8 px floor.</p>
+      </div>
+      <p class="tiny" style="margin-top:4mm">Boxes are drawn to the <strong>outer frame edge</strong> —
+      the frame is part of the purchased unit, therefore part of the cost. Class ids are
+      positional, so the loader <strong>refuses to train</strong> if a dataset's order disagrees with the config.</p>
+    </div>
+    <div class="col">
+      <img src="img/annotations.jpg" alt="Ground-truth annotation examples" class="fit-md">
+      <p class="tiny" style="margin-top:3mm">Ground truth as applied — generated from the committed labels, not screenshotted.</p>
+      <div class="card good" style="margin-top:4mm">
+        <div class="eyebrow" style="color:var(--mint-text);margin-bottom:3mm">SAM verdict</div>
+        <p class="tiny">Helped on <strong>curtain_wall, door, balcony</strong> — large convex regions
+        with strong edges. Failed on the <code>window</code>/<code>curtain_wall</code> boundary:
+        SAM sees edges, not the contract. It segments mirror-glass spandrels beautifully — and
+        they must not be labelled at all.</p>
+      </div>
+    </div>
+  </div>
+  <div class="num">3 / 6</div>
+</section>
+
+<!-- 4 RESULTS -->
+<section class="slide dense">
+  <div class="eyebrow">Results · verification run</div>
+  <h2>yolov8n · 30 epochs · batch 16 · imgsz 640 · seed 42</h2>
+  <div class="kpi">
+    <div><div class="v">0.975</div><div class="l">Precision</div></div>
+    <div><div class="v">0.946</div><div class="l">Recall</div></div>
+    <div><div class="v">0.948</div><div class="l">mAP50</div></div>
+    <div><div class="v mint">0.879</div><div class="l">mAP50-95 · headline</div></div>
+  </div>
+  <div class="cols">
+    <div class="col">
+      <table>
+        <tr><th>class</th><th class="n">inst.</th><th class="n">P</th><th class="n">R</th><th class="n">mAP50</th><th class="n">mAP50-95</th></tr>
+        <tr><td><code>window</code></td><td class="n">316</td><td class="n">0.980</td><td class="n">0.951</td><td class="n">0.985</td><td class="n">0.951</td></tr>
+        <tr><td><code>curtain_wall</code></td><td class="n">37</td><td class="n">0.980</td><td class="n">1.000</td><td class="n">0.995</td><td class="n">0.976</td></tr>
+        <tr class="hi"><td><code>door</code></td><td class="n">24</td><td class="n">0.952</td><td class="n">0.830</td><td class="n">0.821</td><td class="n">0.809</td></tr>
+        <tr><td><code>balcony</code></td><td class="n">66</td><td class="n">0.994</td><td class="n">0.970</td><td class="n">0.965</td><td class="n">0.897</td></tr>
+        <tr class="hi"><td><code>louvre_screen</code></td><td class="n">48</td><td class="n">0.971</td><td class="n">0.979</td><td class="n">0.971</td><td class="n">0.764</td></tr>
+      </table>
+      <div class="banner">
+        <strong>Verification run, not a performance claim.</strong> Procedural dataset, no credentials
+        required — it proves the pipeline executes end to end for a stranger. Synthetic façades are
+        far easier than photographs. Expect materially lower numbers on real data.
+      </div>
+    </div>
+    <div class="col">
+      <img src="img/results.jpg" alt="Training curves" class="fit-sm" style="margin-bottom:4mm">
+      <div class="card accent">
+        <p style="font-size:10.5pt"><strong>Why mAP50-95 is the headline.</strong> The VE read-out is
+        computed from <strong>box area</strong>. A box 20 % too large scores a clean hit at IoU 0.50
+        and produces a 20 % cost error. <code>mAP50</code> is blind to exactly the failure that costs
+        this project money.</p>
+      </div>
+    </div>
+  </div>
+  <div class="num">4 / 6</div>
+</section>
+
+<!-- 5 ERRORS -->
+<section class="slide">
+  <div class="eyebrow">Error analysis · mined automatically, not eyeballed</div>
+  <h2>The metric you report decides what you think you built</h2>
+  <div class="cols">
+    <div class="col">
+      <img src="img/errors.jpg" alt="Worst false positives, false negatives and drift cases" class="fit-md">
+      <p class="tiny" style="margin-top:3mm">
+        <span class="swatch" style="background:#41CF97"></span>ground truth &nbsp;
+        <span class="swatch" style="background:#E03131"></span>wrong prediction &nbsp;
+        <span class="swatch" style="background:#DD6B20"></span>missed instance</p>
+      <table style="margin-top:4mm">
+        <tr><th>error type</th><th class="n">count</th><th class="n">% of errors</th></tr>
+        <tr><td>False negative</td><td class="n">23</td><td class="n">56.1 %</td></tr>
+        <tr><td>False positive</td><td class="n">9</td><td class="n">22.0 %</td></tr>
+        <tr class="hi"><td>Localization error</td><td class="n">6</td><td class="n">14.6 %</td></tr>
+        <tr><td>Class confusion</td><td class="n">3</td><td class="n">7.3 %</td></tr>
+      </table>
+    </div>
+    <div class="col">
+      <div class="card warn" style="margin-bottom:4mm">
+        <p style="font-size:11pt;color:var(--amber-text)"><strong>The finding.</strong>
+        <code>louvre_screen</code> scores mAP50 <strong>0.971</strong> and mAP50-95
+        <strong>0.764</strong>. The model finds almost every louvre screen and boxes almost none
+        tightly — worst case <strong>+31 % box area</strong>. Every one is a true positive at
+        IoU 0.50. A project quoting mAP50 would call this class solved. It is the worst.</p>
+      </div>
+      <p class="tiny" style="margin-bottom:4mm"><strong>Imbalance is a cost bias, not noise.</strong>
+      At <strong>13.8 : 1</strong>, <code>door</code> (96 instances vs 1 341 windows) is worst on every
+      measure. Both <code>door</code>→<code>window</code> confusions had near-perfect boxes
+      (IoU 0.976, 0.970) — localised right, <em>named</em> wrong. Second-highest unit rate, so
+      missing one in six understates entrance cost <strong>systematically</strong>.</p>
+      <div class="rule"></div>
+      <div class="eyebrow" style="margin-bottom:3mm">Iteration plan — data, not a bigger model</div>
+      <ul style="font-size:10.5pt">
+        <li><strong>150 hard negatives</strong> of reflective opaque surfaces. The model learned
+        "reflection ⇒ glazing" and has never seen a counterexample.</li>
+        <li class="mint"><strong>Rebalance <code>door</code></strong> 96 → ~300 instances. Targeted
+        collection, not oversampling.</li>
+        <li class="orange"><strong>Small-instance coverage + an evidenced resolution decision</strong>
+        (640 vs 1280 vs tiling) — measured, not assumed.</li>
+      </ul>
+    </div>
+  </div>
+  <div class="num">5 / 6</div>
+</section>
+
+<!-- 6 HANDOVER -->
+<section class="slide">
+  <div class="eyebrow">Handover · reproducibility · governance</div>
+  <h2>A stranger can run this without asking a single question</h2>
+  <div class="cols">
+    <div class="col">
+      <div class="card good" style="margin-bottom:4mm">
+        <div class="eyebrow" style="color:var(--mint-text);margin-bottom:3mm">Reproducibility proof</div>
+        <p class="tiny"><strong>2026-09-20 19:57 UTC</strong> · restart-and-run-all from a clean
+        checkout · <strong>CPU only</strong>, no GPU · <strong>499 s</strong> for the full 30-epoch
+        contract · <code>ultralytics 8.4.157</code> · completed with no manual intervention.</p>
+        <p class="tiny" style="margin-top:3mm">Expected: <strong>2–4 min</strong> on a Colab T4,
+        8–12 min on CPU.</p>
+      </div>
+      <p class="tiny" style="margin-bottom:3mm"><strong>The default dataset source is synthetic</strong>,
+      so the notebooks run end to end with <strong>no account, no API key and no GPU</strong>.
+      That is the reproducibility requirement taken literally. Point <code>DATASET_SOURCE</code> at
+      Roboflow for real results — the verification banner disappears automatically.</p>
+      <div class="rule"></div>
+      <p class="tiny"><strong>One config file.</strong> Every parameter the README quotes lives in
+      <code>src/config.py</code> and is read from there by the notebooks. There is no second place
+      to change them, so the documentation cannot drift from the run.</p>
+    </div>
+    <div class="col">
+      <img src="img/new_images.jpg" alt="Predictions on unseen images" class="fit-sm">
+      <p class="tiny" style="margin-top:3mm"><strong>Unseen images</strong> — neither in training nor
+      validation. <em>"Never show a client a training image."</em></p>
+      <div class="card warn" style="margin-top:4mm">
+        <div class="eyebrow" style="color:var(--orange);margin-bottom:3mm">Governance</div>
+        <p class="tiny" style="color:var(--amber-text)">
+        <strong>Screening only. It produces False Negatives. It must NOT be the sole verifier for
+        life-safety decisions.</strong><br><br>
+        Privacy by design — no <code>person</code> class, no <code>vehicle</code> class. Data
+        minimisation applied <em>at the class contract</em>, so the model is structurally incapable
+        of identifying anyone. No client or employer imagery.<br><br>
+        <strong>Apache-2.0</strong> over <strong>AGPL-3.0</strong> upstream — fine-tuned YOLOv8
+        weights inherit Ultralytics' AGPL. Commercial deployment needs compliance or an
+        Enterprise Licence.</p>
+      </div>
+    </div>
+  </div>
+  <div class="foot">github.com/OmarEAbdelaal/m4u3-facade-ve-vision</div>
+  <div class="num">6 / 6</div>
+</section>
+</body></html>

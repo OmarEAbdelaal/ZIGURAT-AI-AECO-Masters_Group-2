@@ -12,6 +12,18 @@ Five people are producing slides, notebooks, diagrams and a written report in pa
 
 ---
 
+## Coursework in this repository
+
+| Unit | Deliverable | |
+|---|---|---|
+| **M4U3 — Computer Vision** | **Façade Element Detection for Continuous Value Engineering** — a YOLOv8 detector that reads envelope elements from photographs and rendered elevations, feeding the FMP's Value Engineering loop with Window-to-Wall Ratio and envelope indicators for buildings with no BIM model. | [**→ open**](m4u3-facade-ve-vision/) |
+
+Each coursework folder is self-contained: its own README, licence, notebooks, source and
+results, with no path reaching outside it. The design system below is shared across all of
+them.
+
+---
+
 ## What's in here
 
 ```
