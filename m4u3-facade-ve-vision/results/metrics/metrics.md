@@ -2,7 +2,7 @@
 
 > **VERIFICATION RUN — not a performance claim.** These numbers come from the procedural dataset in `src/synthetic_facades.py`, which exists to prove the pipeline executes end to end without credentials. Synthetic façades are axis-aligned and synthetically lit; the domain gap to a photograph is large. Replace with a `DATASET_SOURCE="roboflow"` run before quoting any figure as a result.
 
-Run (UTC): `2026-09-20T19:57:07+00:00` · device: `CPU only` · train time: 499s
+Run (UTC): `2026-09-20T20:19:20+00:00` · device: `CPU only` · train time: 489s
 `ultralytics 8.4.157` · `torch 2.14.0+cu130`
 
 ## Overall (validation split, IoU 0.50)

@@ -24,6 +24,30 @@
 
 Full machine-readable record: [`results/metrics/metrics.json`](../results/metrics/metrics.json).
 
+### Independent confirmation run
+
+The run above was produced by `src/train.py`. To check that the *notebook* reproduces it
+rather than merely claiming to, `02_train_and_evaluate.ipynb` was then executed
+headlessly, restart-and-run-all, on the same machine:
+
+| | first run (`src/train.py`) | second run (notebook 02) |
+|---|---|---|
+| Started (UTC) | 19:57:07 | 20:19:20 |
+| Precision | 0.9754 | **0.9754** |
+| Recall | 0.9459 | **0.9459** |
+| mAP50 | 0.9475 | **0.9475** |
+| mAP50-95 | 0.8794 | **0.8794** |
+| Training time | 499 s | 489 s |
+
+**All four metrics reproduced exactly, to four decimal places**, and every generated curve
+(`results.png`, both confusion matrices, the P/R/F1/PR curves) was byte-identical between
+the two runs. Only the wall-clock time and the recorded timestamp differ.
+
+That is `seed=42` with `deterministic=True` doing its job on a fixed device, and it is the
+difference between a reproducibility claim and a reproducibility *result*. Note the caveat
+in "Known reproducibility limits" below: this holds on the same hardware. Across different
+GPUs or CUDA builds, expect ±0.01–0.02 mAP even with the seed fixed.
+
 ## Expected runtime range
 
 | Configuration | Dataset | 30 epochs | Notes |

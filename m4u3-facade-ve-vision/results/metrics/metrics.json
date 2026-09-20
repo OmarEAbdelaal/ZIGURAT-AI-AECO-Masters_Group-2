@@ -1,5 +1,5 @@
 {
-  "run_utc": "2026-09-20T19:57:07+00:00",
+  "run_utc": "2026-09-20T20:19:20+00:00",
   "dataset_source": "synthetic",
   "is_verification_run": true,
   "data_yaml": "/home/user/ZIGURAT-AI-AECO-Masters_Group-2/m4u3-facade-ve-vision/data/dataset/synthetic/data.yaml",
@@ -48,7 +48,7 @@
   },
   "device": "cpu",
   "gpu": "CPU only",
-  "train_seconds": 499.0,
+  "train_seconds": 489.3,
   "ultralytics": "8.4.157",
   "torch": "2.14.0+cu130",
   "config": {

@@ -141,6 +141,11 @@ Then open **[03 Inference & Evidence](https://colab.research.google.com/github/O
 images, the VE read-out table, and the automatically mined error taxonomy with cropped
 failure cases.
 
+> **Verified, not asserted.** `02_train_and_evaluate.ipynb` was executed restart-and-run-all
+> and reproduced the committed metrics **exactly to four decimal places**, with every
+> generated curve byte-identical to the original run. Details:
+> [`docs/reproducibility.md`](docs/reproducibility.md).
+
 > **The notebooks ship with their outputs committed.** You can read the whole run —
 > metrics, curves, predictions, error crops — on GitHub without executing anything. The
 > outputs you see are from the run recorded in
