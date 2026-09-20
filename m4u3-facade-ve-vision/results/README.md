@@ -35,13 +35,13 @@ one cannot.
 
 Boxes use the Group 02 design-system series colours, consistently across every image:
 
-| | class |
-|---|---|
-| ![#1C60F3](https://placehold.co/12x12/1C60F3/1C60F3.png) `#1C60F3` | `window` |
-| ![#41CF97](https://placehold.co/12x12/41CF97/41CF97.png) `#41CF97` | `curtain_wall` |
-| ![#7B4FE0](https://placehold.co/12x12/7B4FE0/7B4FE0.png) `#7B4FE0` | `door` |
-| ![#DD6B20](https://placehold.co/12x12/DD6B20/DD6B20.png) `#DD6B20` | `balcony` |
-| ![#17A2B8](https://placehold.co/12x12/17A2B8/17A2B8.png) `#17A2B8` | `louvre_screen` |
+| swatch | hex | class |
+|---|---|---|
+| 🟦 | `#1C60F3` | `window` |
+| 🟩 | `#41CF97` | `curtain_wall` |
+| 🟪 | `#7B4FE0` | `door` |
+| 🟧 | `#DD6B20` | `balcony` |
+| 🟦 | `#17A2B8` | `louvre_screen` |
 
 In `evidence/errors/` the colour coding changes to encode the error instead:
 **green** = ground truth · **red** = a wrong prediction · **orange** = a missed instance.
